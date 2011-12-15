@@ -249,7 +249,7 @@ class WifiDialog extends AlertDialog implements View.OnClickListener,
         if ((mSsid != null && mSsid.length() == 0) ||
                 ((mAccessPoint == null || mAccessPoint.networkId == -1) &&
                 ((mSecurity == AccessPoint.SECURITY_WEP && mPassword.length() == 0) ||
-                (mSecurity == AccessPoint.SECURITY_PSK && mPassword.length() < 8)))) {
+                (mSecurity == AccessPoint.SECURITY_PSK && mPassword.length() < 1)))) {
             getButton(BUTTON_SUBMIT).setEnabled(false);
         } else {
             getButton(BUTTON_SUBMIT).setEnabled(true);
