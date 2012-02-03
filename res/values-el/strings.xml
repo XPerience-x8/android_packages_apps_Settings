@@ -362,6 +362,7 @@
     <string name="wifi_menu_advanced" msgid="7522252991919573664">"Σύνθετα"</string>
     <string name="wifi_menu_connect" msgid="4996220309848349408">"Σύνδεση στο δίκτυο"</string>
     <string name="wifi_menu_forget" msgid="8736964302477327114">"Διαγραφή δικτύου από τη μνήμη"</string>
+    <string name="wifi_menu_forget_all" msgid="6736964302477327114">"Διαγραφή όλων των δικτύων από τη μνήμη"</string>
     <string name="wifi_menu_modify" msgid="2068554918652440105">"Τροποποίηση δικτύου"</string>
     <string name="wifi_ssid" msgid="641393708309146745">"Δίκτυο SSID"</string>
     <string name="wifi_security" msgid="6603611185592956936">"Ασφάλεια"</string>
@@ -386,6 +387,7 @@
     <string name="wifi_secured_with_status" msgid="6489317496506267302">"<xliff:g id="WIFI_STATUS">%2$s</xliff:g>, ασφαλισμένο με <xliff:g id="WIFI_SECURITY">%1$s</xliff:g>"</string>
     <string name="wifi_connect" msgid="1076622875777072845">"Σύνδεση"</string>
     <string name="wifi_forget" msgid="8168174695608386644">"Να διαγραφεί από τη μνήμη"</string>
+    <string name="wifi_forget_all" msgid="6168174695608386644">"Να διαγραφούν όλα τα δίκτυα από τη μνήμη"</string>
     <string name="wifi_save" msgid="3331121567988522826">"Αποθήκευση"</string>
     <string name="wifi_cancel" msgid="6763568902542968964">"Ακύρωση"</string>
     <string name="wifi_advanced_titlebar" msgid="5419052271935350999">"Σύνθετα"</string>

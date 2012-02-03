@@ -868,6 +868,8 @@
     <string name="wifi_menu_connect">Connect to network</string>
     <!-- Menu option to delete a Wi-Fi network -->
     <string name="wifi_menu_forget">Forget network</string>
+    <!-- Menu option to delete all stored Wi-Fi networks -->
+    <string name="wifi_menu_forget_all">Forget all networks</string>
     <!-- Menu option to modify a Wi-Fi network configuration -->
     <string name="wifi_menu_modify">Modify network</string>
 
@@ -918,6 +920,8 @@
     <string name="wifi_connect">Connect</string>
     <!-- Button label to delete a Wi-Fi network -->
     <string name="wifi_forget">Forget</string>
+    <!-- Button label to delete all Wi-Fi networks -->
+    <string name="wifi_forget_all">Forget All</string>
     <!-- Button label to save a Wi-Fi network configuration -->
     <string name="wifi_save">Save</string>
     <!-- Button label to dismiss the dialog -->

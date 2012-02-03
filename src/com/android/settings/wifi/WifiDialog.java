@@ -48,6 +48,7 @@ class WifiDialog extends AlertDialog implements View.OnClickListener,
 
     static final int BUTTON_SUBMIT = DialogInterface.BUTTON_POSITIVE;
     static final int BUTTON_FORGET = DialogInterface.BUTTON_NEUTRAL;
+    static final int BUTTON_FORGET_ALL = DialogInterface.BUTTON_NEUTRAL;
 
     final boolean edit;
     private final DialogInterface.OnClickListener mListener;
@@ -223,6 +224,7 @@ class WifiDialog extends AlertDialog implements View.OnClickListener,
                 }
                 if (mAccessPoint.networkId != -1) {
                     setButton(BUTTON_FORGET, context.getString(R.string.wifi_forget), mListener);
+                    setButton(BUTTON_FORGET_ALL, context.getString(R.string.wifi_forget_all), mListener);
                 }
             }
         }

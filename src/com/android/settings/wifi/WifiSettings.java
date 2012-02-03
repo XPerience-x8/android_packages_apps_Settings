@@ -60,7 +60,8 @@ public class WifiSettings extends PreferenceActivity implements DialogInterface.
     private static final int MENU_ID_ADVANCED = Menu.FIRST + 1;
     private static final int MENU_ID_CONNECT = Menu.FIRST + 2;
     private static final int MENU_ID_FORGET = Menu.FIRST + 3;
-    private static final int MENU_ID_MODIFY = Menu.FIRST + 4;
+    private static final int MENU_ID_FORGET_ALL = Menu.FIRST + 4;
+    private static final int MENU_ID_MODIFY = Menu.FIRST + 5;
 
     private final IntentFilter mFilter;
     private final BroadcastReceiver mReceiver;
@@ -196,6 +197,7 @@ public class WifiSettings extends PreferenceActivity implements DialogInterface.
                 }
                 if (mSelected.networkId != -1) {
                     menu.add(Menu.NONE, MENU_ID_FORGET, 0, R.string.wifi_menu_forget);
+                    menu.add(Menu.NONE, MENU_ID_FORGET_ALL, 0, R.string.wifi_menu_forget_all);
                     if (mSelected.security != AccessPoint.SECURITY_NONE) {
                         menu.add(Menu.NONE, MENU_ID_MODIFY, 0, R.string.wifi_menu_modify);
                     }
@@ -233,6 +235,9 @@ public class WifiSettings extends PreferenceActivity implements DialogInterface.
             case MENU_ID_FORGET:
                 forget(mSelected.networkId);
                 return true;
+            case MENU_ID_FORGET_ALL:
+                forget_all();
+                return true;
             case MENU_ID_MODIFY:
                 showDialog(mSelected, true);
                 return true;
@@ -261,6 +266,8 @@ public class WifiSettings extends PreferenceActivity implements DialogInterface.
     public void onClick(DialogInterface dialogInterface, int button) {
         if (button == WifiDialog.BUTTON_FORGET && mSelected != null) {
             forget(mSelected.networkId);
+        } else if (button == WifiDialog.BUTTON_FORGET_ALL && mSelected != null) {
+            forget_all();
         } else if (button == WifiDialog.BUTTON_SUBMIT && mDialog != null) {
             WifiConfiguration config = mDialog.getConfig();
 
@@ -310,6 +317,16 @@ public class WifiSettings extends PreferenceActivity implements DialogInterface.
     private void forget(int networkId) {
         mWifiManager.removeNetwork(networkId);
         saveNetworks();
+    }
+
+    private void forget_all() {
+        List<WifiConfiguration> configs = mWifiManager.getConfiguredNetworks();
+        if (configs != null) {
+            for (int i=0; i<configs.size(); i++) {
+                mWifiManager.removeNetwork(i);
+            }
+            saveNetworks();
+        }
     }
 
     private void connect(WifiConfiguration config) {
