@@ -84,7 +84,9 @@ public class DeviceInfoSettings extends PreferenceActivity {
         setValueSummary("mod_version", "ro.modversion");
         findPreference("mod_version").setEnabled(true);
         setValueSummary("build_date", "ro.build.date");
-
+        setValueSummary("recovery_version", "ro.recversion");
+        findPreference("recovery_version").setEnabled(true);
+        
         // Remove Safety information preference if PROPERTY_URL_SAFETYLEGAL is not set
         removePreferenceIfPropertyMissing(getPreferenceScreen(), "safetylegal",
                 PROPERTY_URL_SAFETYLEGAL);
