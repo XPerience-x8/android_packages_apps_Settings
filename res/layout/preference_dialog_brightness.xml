@@ -48,6 +48,15 @@
             android:layout_height="wrap_content"
             android:padding="20dip" />
 
+        <CheckBox android:id="@+id/ultra_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ultra_brightness"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginTop="6dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip" />
+
     </LinearLayout>
 
 </ScrollView>

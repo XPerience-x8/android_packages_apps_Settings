@@ -732,6 +732,7 @@
     <string name="screensaver_activate_on_dock_title">Also start when docked</string>
     <!-- Sound & display settings screen, setting option name to change whether the screen adjusts automatically based on lighting conditions -->
     <string name="automatic_brightness">Automatic brightness</string>
+    <string name="ultra_brightness">Ultra brightness</string>
     <!-- [CHAR LIMIT=30] Sound & display settings screen, setting option name to change font size -->
     <string name="title_font_size">Font size</string>
     <!-- Sound & display settings screen, setting option summary displaying the currently selected font size -->
@@ -897,6 +898,7 @@
     <string name="pref_brightness_mode_summary">View or change the Brightness button modes</string>
     <string name="cm_brightness_mode_auto">Auto</string>
     <string name="cm_brightness_mode_dim">Dim</string>
+    <string name="cm_brightness_mode_ultra">Ultra</string>
     <string name="pref_network_mode_title">Network modes</string>
     <string name="pref_screentimeout_mode_title">Screen timeout modes</string>
     <string name="pref_ring_mode_title">Sound modes</string>

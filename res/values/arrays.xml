@@ -854,6 +854,7 @@
         <item>50%</item>
         <item>75%</item>
         <item>100%</item>
+        <item>@string/cm_brightness_mode_ultra</item>
     </string-array>
 
    <string-array name="values_brightness_widget" translatable="false">
@@ -863,6 +864,7 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
+        <item>6</item>
     </string-array>
 
     <string-array name="entries_network_widget">
