@@ -22,6 +22,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.SystemProperties;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
+import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 
 import com.android.settings.Utils;
@@ -31,6 +33,8 @@ import java.util.List;
 import java.io.IOException;
 import java.io.DataOutputStream;
 import java.io.DataInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class BootReceiver extends BroadcastReceiver {
 
@@ -60,6 +64,12 @@ public class BootReceiver extends BroadcastReceiver {
                 SystemProperties.set(KSM_SETTINGS_PROP, "false");
             }
         }
+
+        if (getUltraBrightnessMode(ctx, 0) == 1)
+            writeOneLine("/sys/devices/platform/i2c-adapter/i2c-0/0-0036/mode", "i2c_pwm");
+        else
+            writeOneLine("/sys/devices/platform/i2c-adapter/i2c-0/0-0036/mode", "i2c_pwm_als");
+
     }
 
     private void configureCPU(Context ctx) {
@@ -120,6 +130,31 @@ public class BootReceiver extends BroadcastReceiver {
 
         Utils.fileWriteOneLine(MemoryManagement.KSM_RUN_FILE, ksm ? "1" : "0");
         Log.d(TAG, "KSM settings restored.");
+    }
+
+    private int getUltraBrightnessMode(Context ctx, int defaultValue) {
+        int ultraMode = defaultValue;
+        try {
+            ultraMode = Settings.System.getInt(ctx.getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS_ULTRA_MODE);
+        } catch (SettingNotFoundException snfe) {}
+        return ultraMode;
+    }
+
+    public static boolean writeOneLine(String fname, String value) {
+        try {
+            FileWriter fw = new FileWriter(fname);
+            try {
+                fw.write(value);
+            } finally {
+                fw.close();
+            }
+        } catch (IOException e) {
+            String Error = "Error writing to " + fname + ". Exception: ";
+            Log.e(TAG, Error, e);
+            return false;
+        }
+        return true;
     }
 
     private static boolean insmod(String module, boolean insert) {
