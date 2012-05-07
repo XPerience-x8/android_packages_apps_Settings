@@ -66,6 +66,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
     private static final String KEY_DEVICE_MEMORY = "device_memory";
 
     private static final String KEY_MOD_VERSION = "mod_version";
+    private static final String KEY_RECOVERY_VERSION = "recovery_version";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
 
     private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
@@ -86,6 +87,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
         setValueSummary(KEY_MOD_VERSION, "ro.cm.version");
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
+        setValueSummary(KEY_RECOVERY_VERSION, "ro.recversion");
+        findPreference(KEY_RECOVERY_VERSION).setEnabled(true);
 
         String cpuInfo = getCPUInfo();
         String memInfo = getMemInfo();
