@@ -4471,6 +4471,10 @@ found in the list of installed apps.</string>
     <string name="pref_volume_wake_title">Volume rocker wake</string>
     <string name="pref_volume_wake_summary">Pressing the volume rocker up/down will wake the device</string>
 
+    <!--  Update Notifications -->
+    <string name="updatenotify_title">Update notifications</string>
+    <string name="updatenotify_summary">Get push notifications of updates</string>
+
     <string name="profile_write_nfc_tag">Write to NFC tag</string>
     <string name="profile_write_touch_tag">Touch tag to write</string>
     <string name="profile_write_success">Tag successfully written</string>
