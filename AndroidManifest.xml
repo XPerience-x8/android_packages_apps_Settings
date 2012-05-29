@@ -1408,6 +1408,19 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".cyanogenmod.A2SDActivity"
+                android:label="@string/a2sd_settings_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".cyanogenmod.A2SDInfo"
+                android:label="@string/a2sd_info_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+
         <activity android:name=".ApnEditor" />
 
         <activity android:name=".notificationlight.NotificationLightSettings" />
