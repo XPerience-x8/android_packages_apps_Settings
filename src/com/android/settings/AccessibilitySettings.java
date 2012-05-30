@@ -106,6 +106,8 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
     private static final String TOGGLE_LARGE_TEXT_PREFERENCE = "toggle_large_text_preference";
     private static final String TOGGLE_POWER_BUTTON_ENDS_CALL_PREFERENCE =
         "toggle_power_button_ends_call_preference";
+    private static final String TOGGLE_BACK_BUTTON_ENDS_CALL_PREFERENCE =
+        "toggle_back_button_ends_call_preference";
     private static final String TOGGLE_AUTO_ROTATE_SCREEN_PREFERENCE =
         "toggle_auto_rotate_screen_preference";
     private static final String TOGGLE_SPEAK_PASSWORD_PREFERENCE =
@@ -160,6 +162,7 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
 
     private CheckBoxPreference mToggleLargeTextPreference;
     private CheckBoxPreference mTogglePowerButtonEndsCallPreference;
+    private CheckBoxPreference mToggleBackButtonEndsCallPreference;
     private CheckBoxPreference mToggleAutoRotateScreenPreference;
     private CheckBoxPreference mToggleSpeakPasswordPreference;
     private Preference mToggleTouchExplorationPreference;
@@ -213,6 +216,9 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
         } else if (mTogglePowerButtonEndsCallPreference == preference) {
             handleTogglePowerButtonEndsCallPreferenceClick();
             return true;
+        } else if (mToggleBackButtonEndsCallPreference == preference) {
+            handleToggleBackButtonEndsCallPreferenceClick();
+            return true;
         } else if (mToggleAutoRotateScreenPreference == preference) {
             handleToggleAutoRotateScreenPreferenceClick();
             return true;
@@ -237,6 +243,14 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
                 (mTogglePowerButtonEndsCallPreference.isChecked()
                         ? Settings.Secure.INCALL_POWER_BUTTON_BEHAVIOR_HANGUP
                         : Settings.Secure.INCALL_POWER_BUTTON_BEHAVIOR_SCREEN_OFF));
+    }
+
+    private void handleToggleBackButtonEndsCallPreferenceClick() {
+        Settings.Secure.putInt(getContentResolver(),
+                Settings.Secure.INCALL_BACK_BUTTON_BEHAVIOR,
+                (mToggleBackButtonEndsCallPreference.isChecked()
+                        ? Settings.Secure.INCALL_BACK_BUTTON_BEHAVIOR_HANGUP
+                        : Settings.Secure.INCALL_BACK_BUTTON_BEHAVIOR_BACK));
     }
 
     private void handleToggleAutoRotateScreenPreferenceClick() {
@@ -273,6 +287,14 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
         if (!KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_POWER)
                 || !Utils.isVoiceCapable(getActivity())) {
             mSystemsCategory.removePreference(mTogglePowerButtonEndsCallPreference);
+        }
+
+        // Back button ends calls.
+        mToggleBackButtonEndsCallPreference =
+            (CheckBoxPreference) findPreference(TOGGLE_BACK_BUTTON_ENDS_CALL_PREFERENCE);
+        if (!KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_BACK)
+                || !Utils.isVoiceCapable(getActivity())) {
+            mSystemsCategory.removePreference(mToggleBackButtonEndsCallPreference);
         }
 
         // Auto-rotate screen
@@ -435,6 +457,17 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
             final boolean powerButtonEndsCall =
                 (incallPowerBehavior == Settings.Secure.INCALL_POWER_BUTTON_BEHAVIOR_HANGUP);
             mTogglePowerButtonEndsCallPreference.setChecked(powerButtonEndsCall);
+        }
+
+        // Back button ends calls.
+        if (KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_BACK)
+                && Utils.isVoiceCapable(getActivity())) {
+            final int incallBackBehavior = Settings.Secure.getInt(getContentResolver(),
+                    Settings.Secure.INCALL_BACK_BUTTON_BEHAVIOR,
+                    Settings.Secure.INCALL_BACK_BUTTON_BEHAVIOR_DEFAULT);
+            final boolean backButtonEndsCall =
+                (incallBackBehavior == Settings.Secure.INCALL_BACK_BUTTON_BEHAVIOR_HANGUP);
+            mToggleBackButtonEndsCallPreference.setChecked(backButtonEndsCall);
         }
 
         // Auto-rotate screen
