@@ -1421,6 +1421,19 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".cyanogenmod.SWAPActivity"
+                android:label="@string/swap_settings_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".cyanogenmod.SWAPInfo"
+                android:label="@string/swap_info_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+
         <activity android:name=".ApnEditor" />
 
         <activity android:name=".notificationlight.NotificationLightSettings" />
@@ -1485,6 +1498,12 @@
         <receiver android:name=".cyanogenmod.BootReceiver" android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.SHUTDOWN" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <data android:scheme="file" />
             </intent-filter>
         </receiver>
 

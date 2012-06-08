@@ -33,6 +33,12 @@
            android:targetClass="com.android.settings.cyanogenmod.A2SDActivity" />
     </PreferenceScreen>
 
+    <PreferenceScreen android:key="swap_settings" android:title="@string/swap_title" android:summary="@string/swap_summary">
+       <intent android:action="android.intent.action.MAIN"
+           android:targetPackage="com.android.settings"
+           android:targetClass="com.android.settings.cyanogenmod.SWAPActivity" />
+    </PreferenceScreen>
+
     <CheckBoxPreference
         android:key="pref_purgeable_assets"
         android:title="@string/pref_purgeable_assets_title"
