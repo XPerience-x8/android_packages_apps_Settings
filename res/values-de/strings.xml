@@ -1861,6 +1861,10 @@ ice shows the slider widgets before the unlock option [CHAR LIMIT=28]-->
     <string name="lockscreen_background_custom_image">Benutzerdefiniertes Bild</string>
     <string name="lockscreen_background_default_wallpaper">Standardbild</string>
 
+    <!-- Lock Screen Flashlight-->
+    <string name="pref_lockscreen_flashlight_title">Sperrbildschirm Taschenlampe</string>
+    <string name="pref_lockscreen_flashlight_summary">Langes Drücken der HOME-Taste schaltet die Taschenlampe an/aus</string>
+
     <!-- Screen security - Screen security  #CM -->
     <string name="screen_security_category">Bildschirm-Sicherheit</string>
     <string name="screen_security_title">Sicherheitssperre</string>

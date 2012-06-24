@@ -292,6 +292,11 @@
     <string name="lock_after_timeout" msgid="4590337686681194648">"Κλειδώνει αυτόματα"</string>
     <string name="lock_after_timeout_summary" msgid="6128431871360905631">"<xliff:g id="TIMEOUT_STRING">%1$s</xliff:g> μετά την κατάσταση αναστολής λειτουργίας"</string>
     <string name="show_owner_info_on_lockscreen_label" msgid="5074906168357568434">"Εμφάνιση πληροφοριών κατόχου στην οθόνη κλειδώμ."</string>
+
+    <!-- Lock Screen Flashlight-->
+    <string name="pref_lockscreen_flashlight_title">Φακός στην οθόνη κλειδώματος</string>
+    <string name="pref_lockscreen_flashlight_summary">Παρατεταμένη πιεση του πλήκτρου HOME στην οθόνη κλειδώματος αναβεί/σβήνει το Φλας</string>
+
     <string name="owner_info_settings_title" msgid="2723190010708381889">"Στοιχεία κατόχου"</string>
     <string name="owner_info_settings_summary" msgid="3800834657847339570"></string>
     <string name="owner_info_settings_edit_text_hint" msgid="4608681417960923911">"Εισάγετε κείμενο για εμφάνιση σε οθόνη κλειδώματος"</string>

@@ -1914,6 +1914,10 @@
     <string name="calendar_metadata_first_line">最初の1行を表示</string>
     <string name="calendar_metadata_all">すべて表示</string>
 
+    <!-- Lock Screen Flashlight-->
+    <string name="pref_lockscreen_flashlight_title">ロックスクリーン フラッシュライト</string>
+    <string name="pref_lockscreen_flashlight_summary">ロックスクリーン上でHOMEボタン長押しによりフラッシュライトに切り替える</string>
+
     <!-- Lock screen background -->
     <string name="lockscreen_custom_background_title">壁紙</string>
     <string name="lockscreen_custom_background_dialog_title">色を選択</string>

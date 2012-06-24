@@ -1845,6 +1845,10 @@
     <string name="calendar_metadata_first_line">Toon eerste regel</string>
     <string name="calendar_metadata_all">Toon alles</string>
 
+    <!-- Lock Screen Flashlight-->
+    <string name="pref_lockscreen_flashlight_title">Vergrendelscherm zaklamp</string>
+    <string name="pref_lockscreen_flashlight_summary">Druk lang op de homeknop vanaf het vergrendelscherm om de zaklamp in/uit te schakelen</string>
+
     <!-- Profiles settings -->
     <string name="profiles_settings_title">Profielen</string>
     <string name="profile_settings_title">Profiel</string>
