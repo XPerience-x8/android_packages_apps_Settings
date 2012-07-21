@@ -25,6 +25,9 @@
     <!-- LED Flashlight -->
     <bool name="has_led_flash">false</bool>
 
+    <!-- Undervolting module -->
+    <string name="undervolting_module"></string>
+
     <!-- Ad-hoc network support. Some devices (unpatched bcmdhd) have broken
          ad-hoc support and so we should hide ad-hoc network on those devices -->
     <bool name="config_show_adhoc_network">true</bool>
