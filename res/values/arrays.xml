@@ -981,6 +981,13 @@
         <item>26</item>
     </string-array>
 
+    <string-array name="swap_sizes_values" translatable="false">
+        <item>32</item>
+        <item>64</item>
+        <item>128</item>
+        <item>256</item>
+    </string-array>
+
     <string-array name="entries_status_bar_am_pm">
         <item>Normal</item>
         <item>Small</item>
