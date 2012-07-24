@@ -4687,6 +4687,15 @@
     <string name="swap_loading">Loading Swap information\u2026</string>
     <string name="swap_error">Error loading Swap information\u2026</string>
 
+    <!-- Partition Info -->
+    <string name="partition_info_title">Partition info</string>
+    <string name="partition_info_system">/system</string>
+    <string name="partition_info_data">/data</string>
+    <string name="partition_info_cache">/cache</string>
+    <string name="partition_info_sdcard">/sdcard (FAT)</string>
+    <string name="partition_info_sdext">/sd-ext (EXT)</string>
+    <string name="partition_info_used_of">/</string>
+
     <!-- System Updates  -->
     <!-- About device screen, list item title. Takes the user to the screen for seeing and installing system updates. -->
     <string name="system_update_settings_list_item_title">System updates</string>
