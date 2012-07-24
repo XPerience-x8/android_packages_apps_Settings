@@ -16,6 +16,11 @@
 
 package com.android.settings.cyanogenmod;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -24,6 +29,7 @@ import android.preference.ListPreference;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
