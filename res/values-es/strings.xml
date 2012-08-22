@@ -608,7 +608,6 @@
     <string name="wifi_p2p_menu_search" msgid="7189970585393813135">"Buscar"</string>
     <string name="wifi_p2p_menu_create_group" msgid="7595229161883902082">"Crear grupo"</string>
     <string name="wifi_p2p_menu_remove_group" msgid="4844634506540667517">"Eliminar grupo"</string>
-    <string name="wifi_p2p_menu_advanced" msgid="2578792521809265949">"Avanzados"</string>
     <string name="wifi_p2p_available_devices" msgid="5943352520059654483">"Dispositivos disponibles"</string>
     <string name="wifi_tether_checkbox_text" msgid="6961605862058056788">"Zona Wi-Fi portátil"</string>
     <string name="wifi_tether_enabled_subtext" msgid="8948641212931906143">"<xliff:g id="NETWORK_SSID">%1$s</xliff:g> de zona Wi-Fi portátil activa"</string>
@@ -638,6 +637,30 @@
     <string name="notification_light_default_value">Por defecto</string>
     <string name="notification_light_missed_call_title">Llamada perdida</string>
     <string name="notification_light_voicemail_title">Buzón de voz</string>
+    <string name="edit_light_settings">Notificaciones luminosas</string>
+    <string name="pulse_speed_title">Duración y velocidad</string>
+    <string name="picker_arrow">→</string>
+    <string name="default_time">Normal</string>
+    <string name="custom_time">Personalizado</string>
+    <string name="dialog_test">Probar</string>
+    <string name="dialog_delete_title">Eliminar</string>
+    <string name="dialog_delete_message">¿Eliminar el elemento seleccionado?</string>
+    <string name="dialog_test_message">Apagar la pantalla para comprobar la notificación o descartar el diálogo actual para terminar la prueba</string>
+    <string name="dialog_test_button">Descartar</string>
+
+    <!-- Values for the notification light pulse spinners -->
+    <string name="pulse_length_always_on">Siempre encendida</string>
+    <string name="pulse_length_very_short">Muy corta</string>
+    <string name="pulse_length_short">Corta</string>
+    <string name="pulse_length_normal">Normal</string>
+    <string name="pulse_length_long">Larga</string>
+    <string name="pulse_length_very_long">Muy larga</string>
+    <string name="pulse_speed_very_fast">Muy rápida</string>
+    <string name="pulse_speed_fast">Rápida</string>
+    <string name="pulse_speed_normal">Normal</string>
+    <string name="pulse_speed_slow">Lenta</string>
+    <string name="pulse_speed_very_slow">Muy lenta</string>
+
     <string name="incoming_call_volume_title" msgid="8073714801365904099">"Tono"</string>
     <string name="notification_volume_title" msgid="2012640760341080408">"Notificación"</string>
     <string name="checkbox_notification_same_as_incoming_call" msgid="1073644356290338921">"Utilizar volumen de llamada entrante para notificaciones"</string>
@@ -908,6 +931,15 @@
     <string name="bluetooth_tethering_overflow_error" msgid="6285122039489881969">"No se puede anclar a más de <xliff:g id="MAXCONNECTION">%1$d</xliff:g> dispositivos."</string>
     <string name="bluetooth_untether_blank" msgid="2871192409329334813">"Se desactivará el anclaje a red de <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="tethering_help_button_text" msgid="656117495547173630">"Ayuda"</string>
+    <string name="tethering_advanced_text">Avanzado</string>
+    <string name="tethering_lease_time_text">Expiración de DHCP</string>
+    <string name="dhcp_lease_30mn">30 minutos</string>
+    <string name="dhcp_lease_1h">1 hora (predeterminado)</string>
+    <string name="dhcp_lease_2h">2 horas</string>
+    <string name="dhcp_lease_4h">4 horas</string>
+    <string name="dhcp_lease_6h">6 horas</string>
+    <string name="dhcp_lease_12h">12 horas</string>
+    <string name="dhcp_lease_24h">24 horas</string>
     <string name="network_settings_title" msgid="7967552516440151852">"Redes móviles"</string>
     <string name="location_title" msgid="1029961368397484576">"Mi ubicación"</string>
     <string name="location_network_based" msgid="5569673665032992664">"Ubicación de Google"</string>
@@ -1128,6 +1160,8 @@
     <string name="spellchecker_security_warning" msgid="9060897418527708922">"Este corrector ortográfico puede registrar todo lo que escribas, incluidos datos personales, como las contraseñas y los números de las tarjetas de crédito. Procede de la aplicación <xliff:g id="SPELLCHECKER_APPLICATION_NAME">%1$s</xliff:g>. ¿Quieres usar este corrector ortográfico?"</string>
     <string name="pointer_settings_category" msgid="8183819795164034286">"Ratón/trackpad"</string>
     <string name="pointer_speed" msgid="1221342330217861616">"Velocidad del puntero"</string>
+    <string name="ime_switcher_notify">Selector en notificaciones</string>
+    <string name="ime_switcher_notify_summary">Muestra el selector de método de entrada de texto en la barra de notificaciones</string>
     <string name="user_dict_settings_titlebar" msgid="765659257455000490">"Diccionario del usuario"</string>
     <string name="user_dict_single_settings_title" msgid="524997218433540614">"Diccionario personal"</string>
     <string name="user_dict_multiple_settings_title" msgid="3735224433307996276">"Diccionarios personales"</string>
@@ -1633,9 +1667,6 @@
     <string name="stubbed">"Preferencias"</string>
     <string name="stubbed_summary">"Opción no disponible en este momento"</string>
 
-    <!-- Display settings screen, battery light repeat pulsing title -->
-    <string name="battery_pulse_title">"Indicador de batería baja"</string>
-
 <!-- INTERFACE Settings #CM -->
     <!-- Settings main menu category heading. Interface (Launcher, Themes, System). [CHAR LIMIT=40] -->
     <string name="header_category_interface">"Interfaz Gráfica"</string>
@@ -1661,17 +1692,12 @@
     <!-- Power Widget #CM -->
     <string name="power_widget_title">"Controles de Energía"</string>
     <string name="title_expanded_widget">"Barra de Energía"</string>
-    <string name="summary_expanded_widget">"Mostrar la barra de controles de energía en el área de notificación"</string>
     <string name="title_expanded_hide_onchange">"Ocultar al pulsar"</string>
-    <string name="summary_expanded_hide_onchange">"Ocultar el área de notificación despues de pulsar sobre un control de energía"</string>
-    <string name="title_expanded_hide_indicator">"Separador"</string>
-    <string name="summary_expanded_hide_indicator">"Ocultar el separador de la barra de control de energía"</string>
-    <string name="title_expanded_hide_scrollbar">"Barra de desplazamiento"</string>
-    <string name="summary_expanded_hide_scrollbar">"Ocultar la barra de desplazamiento cuando se ha haya llegado al máximo de controles"</string>
+    <string name="title_expanded_hide_indicator">"Ocultar indicadores"</string>
+    <string name="title_expanded_hide_scrollbar">"Ocultar barra de desplazamiento"</string>
 
     <!-- Power Widget, Haptic feedback #CM -->
     <string name="expanded_haptic_feedback_title">"Respuesta háptica"</string>
-    <string name="expanded_haptic_feedback_summary">"Activar/desactivar respuesta háptica"</string>
 
     <!-- Power Widget, Buttons #CM -->
     <string name="title_widget_picker">"Controles"</string>
@@ -1708,9 +1734,7 @@
     <string name="cm_brightness_mode_auto">"Automático"</string>
     <string name="cm_brightness_mode_dim">"Atenuar"</string>
     <string name="pref_network_mode_title">"Conectividad móvil"</string>
-    <string name="pref_network_mode_summary">"Escoja los tipos de conectividad móvil disponibles en la barra de controles de energía"</string>
     <string name="pref_screentimeout_mode_title">Tiempos espera pantalla"</string>
-    <string name="pref_screentimeout_mode_summary">"Escoja los modos de tiempos de espera de pantalla disponibles en la barra de controles de energía"</string>
     <string name="pref_ring_mode_title">"Volumen"</string>
     <string name="pref_ring_mode_summary">"Escoja los modos de sonido disponibles en la barra de controles de energía"</string>
     <string name="cm_sound_mode_silent">"Silencio"</string>
@@ -1718,7 +1742,6 @@
     <string name="cm_sound_mode_sound">"Sonar"</string>
     <string name="cm_sound_mode_soundVibrate">"Sonar+Vibrar"</string>
     <string name="pref_flash_mode_title">"Flash LED"</string>
-    <string name="pref_flash_mode_summary">"Escoja los modos de flash LED disponibles en la barra de controles de energía"</string>
 
     <!-- Status bar #CM -->
     <string name="status_bar_title">"Barra de estado"</string>
@@ -1728,6 +1751,7 @@
     <string name="status_bar_show_clock_summary">"Mostrar el reloj en la barra de estado"</string>
     <string name="status_bar_am_pm_title">"Estilo AM/PM"</string>
     <string name="status_bar_am_pm_summary">"Estilo AM/PM a mostrar junto a la hora del reloj en la barra de estado"</string>
+    <string name="status_bar_am_pm_info">Activado el modo 24-horas</string>
     <string name="status_bar_battery_title">"Estilo batería"</string>
     <string name="status_bar_battery_summary">"Estilo del estado de batería a mostrar en la barra de estado"</string>
     <string name="status_bar_signal_text_title">"Estilo de la señal de estado"</string>
@@ -1762,15 +1786,12 @@
     <string name="weather_use_custom_location">Usar ubicación personalizada</string>
     <string name="weather_geolocated">Geolocalización por red</string>
     <string name="weather_custom_location_dialog_title">Ingresar ubicación</string>
-    <string name="weather_custom_location_dialog_message">Advertencia: Usar una ubicación invalida detendra las actualizaciones.</string>
     <string name="weather_custom_location_hint">Ciudad, Estado/País</string>
     <string name="weather_custom_location_title">Ubicación</string>
     <string name="weather_show_location_title">Mostrar ubicación</string>
     <string name="weather_show_timestamp_title">Mostrar fecha y hora</string>
     <string name="weather_refresh_interval">Intervalo de actualización</string>
-    <string name="weather_update">Actualizar</string>
     <string name="weather_use_metric">Usar sistema métrico</string>
-    <string name="weather_refreshing">Actualizando clima</string>
     <string name="weather_retrieve_location_dialog_title">¡No se puede encontrar la ubicación!</string>
     <string name="weather_retrieve_location_dialog_message">Geolocalización por red desactivada.\n\nConfigure una ubicación personalizada o active la geolocalización por red</string>
     <string name="weather_retrieve_location_dialog_enable_button">Activar</string>
@@ -1875,6 +1896,14 @@
 
     <!-- Volume description for ringtone volume #CM -->
     <string name="volume_ring_only_description">Tonos del teléfono</string>
+
+    <!-- Battery light settings #CM -->
+    <string name="battery_light_title">Indicador de batería</string>
+    <string name="battery_low_pulse_title">Parpadear con batería baja</string>
+    <string name="battery_light_list_title">Colores</string>
+    <string name="battery_light_low_color_title">Batería baja</string>
+    <string name="battery_light_medium_color_title">Cargando</string>
+    <string name="battery_light_full_color_title">Cargada</string>
 
     <!-- Backlight #CM -->
     <string name="backlight_title">"Brillo automático"</string>
@@ -2027,6 +2056,13 @@
     <string name="profile_lockmode_default_summary">"Utilizar valores por defecto"</string>
     <string name="profile_lockmode_insecure_summary">"Utilizar bloqueo de pantalla no seguro"</string>
     <string name="profile_lockmode_disabled_summary">"Bloqueo de pantalla desactivado"</string>
+    <string name="profile_airplanemode_title">Modo Avión</string>
+    <string name="profile_airplanemode_default">Predeterminado</string>
+    <string name="profile_airplanemode_enabled">Activado</string>
+    <string name="profile_airplanemode_disabled">Desactivado</string>
+    <string name="profile_airplanemode_default_summary">Usar ajustes por defecto</string>
+    <string name="profile_airplanemode_enabled_summary">Modo Avión está activado</string>
+    <string name="profile_airplanemode_disabled_summary">Modo Avión está desactivado</string>
     <string name="profile_disable_screen_lock_summary">"Desactivar seguridad de bloqueo de pantalla miestras este perfil este activo"</string>
 
     <!-- Connection override toggles (not all are used at this time ) -->
@@ -2109,10 +2145,6 @@
     <string name="cpu_set_on_boot">"Establecer al iniciar"</string>
     <string name="cpu_set_on_boot_summary">"Restaurar la configuración del procesador al iniciar el sistema"</string>
 
-    <!-- Performance Settings : Disable bootanimation -->
-    <string name="pref_disable_bootanimation_title">Deshabilitar animación de inicio</string>
-    <string name="pref_disable_bootanimation_summary">No mostrar la animación de inicio para un arranque más rápido</string>
-
     <!-- Memory Management -->
     <string name="memory_management_title">"Gestión de la memoria"</string>
     <string name="memory_management_summary">"Personalice el uso de la memoria para cambiar el rendimiento del sistema"</string>
@@ -2172,4 +2204,22 @@
     <string name="stylus_icon_enabled_summary">Mostrar el cursor cuando se arrastra o dibuja con Stylus</string>
     <!-- Hostname setting -->
     <string name="device_hostname">Nombre del dispositivo</string>
+    <!-- Status bar notification count -->
+    <string name="status_bar_notif_count_title">Mostrar contador notificaciones</string>
+    <string name="status_bar_notif_count_summary">Mostrar el número de notificaciones pendientes en la barra de estado</string>
+
+    <string name="increasing_ring_title">Volumen ascendente</string>
+    <!-- Sound settings screen, the caption of the checkbox for making incoming calls increas in volume -->
+    <string name="checkbox_increasing_ring">Activar volumen ascendente</string>
+    <!-- Sound settings screen, the title of the volume bar to adjust the minimum increasing ring volume -->
+    <string name="increasing_ring_min_volume_title">Volumen inicial</string>
+    <string name="increasing_ring_volume_notice">Nota:\nSi el volumen inicial se establece más alto que el volumen de llamada, prevalecerá el volumen de llamada.</string>
+    <string name="increasing_ring_interval_title">Incrementar cada\u2026</string>
+    <string name="increasing_ring_interval_eachring">Tono de llamada</string>
+    <string name="increasing_ring_interval_half_second">Medio segundo</string>
+    <string name="increasing_ring_interval_1second">Segundo</string>
+    <string name="increasing_ring_interval_2seconds">2 segundos</string>
+    <string name="increasing_ring_interval_3seconds">3 segundos</string>
+    <string name="increasing_ring_interval_5seconds">5 segundos</string>
+    <string name="increasing_ring_interval_10seconds">10 segundos</string>
 </resources>

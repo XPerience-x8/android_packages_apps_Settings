@@ -131,7 +131,9 @@ public class Processor extends SettingsPreferenceFragment implements
 
         /* Governor
         Some systems might not use governors */
-        if (Utils.fileExists(GOV_LIST_FILE) == false || Utils.fileExists(GOV_FILE) == false || (temp = Utils.fileReadOneLine(GOV_FILE)) == null || (availableGovernorsLine = Utils.fileReadOneLine(GOV_LIST_FILE)) == null) {
+        if (!Utils.fileExists(GOV_LIST_FILE) || !Utils.fileExists(GOV_FILE)
+                || (temp = Utils.fileReadOneLine(GOV_FILE)) == null
+                || (availableGovernorsLine = Utils.fileReadOneLine(GOV_LIST_FILE)) == null) {
             prefScreen.removePreference(mGovernorPref);
 
         } else {
@@ -145,7 +147,7 @@ public class Processor extends SettingsPreferenceFragment implements
         }
 
         // Disable the min/max list if we dont have a list file
-        if (Utils.fileExists(FREQ_LIST_FILE) == false || (availableFrequenciesLine = Utils.fileReadOneLine(FREQ_LIST_FILE)) == null) {
+        if (!Utils.fileExists(FREQ_LIST_FILE) || (availableFrequenciesLine = Utils.fileReadOneLine(FREQ_LIST_FILE)) == null) {
             mMinFrequencyPref.setEnabled(false);
             mMaxFrequencyPref.setEnabled(false);
 
@@ -158,7 +160,7 @@ public class Processor extends SettingsPreferenceFragment implements
             }
 
             // Min frequency
-            if (Utils.fileExists(FREQ_MIN_FILE) == false || (temp = Utils.fileReadOneLine(FREQ_MIN_FILE)) == null) {
+            if (!Utils.fileExists(FREQ_MIN_FILE) || (temp = Utils.fileReadOneLine(FREQ_MIN_FILE)) == null) {
                 mMinFrequencyPref.setEnabled(false);
 
             } else {
@@ -170,7 +172,7 @@ public class Processor extends SettingsPreferenceFragment implements
             }
 
             // Max frequency
-            if (Utils.fileExists(FREQ_MAX_FILE) == false || (temp = Utils.fileReadOneLine(FREQ_MAX_FILE)) == null) {
+            if (!Utils.fileExists(FREQ_MAX_FILE) || (temp = Utils.fileReadOneLine(FREQ_MAX_FILE)) == null) {
                 mMaxFrequencyPref.setEnabled(false);
 
             } else {
@@ -194,7 +196,7 @@ public class Processor extends SettingsPreferenceFragment implements
             FREQ_CUR_FILE = FREQINFO_CUR_FILE;
         }
 
-        if (Utils.fileExists(FREQ_CUR_FILE) == false || (temp = Utils.fileReadOneLine(FREQ_CUR_FILE)) == null) {
+        if (!Utils.fileExists(FREQ_CUR_FILE) || (temp = Utils.fileReadOneLine(FREQ_CUR_FILE)) == null) {
             mCurFrequencyPref.setEnabled(false);
 
         } else {
@@ -210,17 +212,17 @@ public class Processor extends SettingsPreferenceFragment implements
 
         super.onResume();
 
-        if (Utils.fileExists(FREQ_MIN_FILE) != false && (temp = Utils.fileReadOneLine(FREQ_MIN_FILE)) != null) {
+        if (Utils.fileExists(FREQ_MIN_FILE) && (temp = Utils.fileReadOneLine(FREQ_MIN_FILE)) != null) {
             mMinFrequencyPref.setValue(temp);
             mMinFrequencyPref.setSummary(String.format(mMinFrequencyFormat, toMHz(temp)));
         }
 
-        if (Utils.fileExists(FREQ_MAX_FILE) != false && (temp = Utils.fileReadOneLine(FREQ_MAX_FILE)) != null) {
+        if (Utils.fileExists(FREQ_MAX_FILE) && (temp = Utils.fileReadOneLine(FREQ_MAX_FILE)) != null) {
             mMaxFrequencyPref.setValue(temp);
             mMaxFrequencyPref.setSummary(String.format(mMaxFrequencyFormat, toMHz(temp)));
         }
 
-        if (Utils.fileExists(GOV_FILE) != false && (temp = Utils.fileReadOneLine(GOV_FILE)) != null) {
+        if (Utils.fileExists(GOV_FILE) && (temp = Utils.fileReadOneLine(GOV_FILE)) != null) {
             mGovernorPref.setSummary(String.format(mGovernorFormat, temp));
         }
     }
