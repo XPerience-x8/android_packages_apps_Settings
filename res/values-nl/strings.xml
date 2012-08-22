@@ -1699,4 +1699,7 @@
     <string name="help_label" msgid="1107174367904110532">"Help"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"Cell broadcasts"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Selecteer de typen noodoproepen die moeten worden weergegeven."</string>
+    <!-- Lock Screen Flashlight-->
+    <string name="pref_lockscreen_flashlight_title">Vergrendelscherm zaklamp</string>
+    <string name="pref_lockscreen_flashlight_summary">Druk lang op de homeknop vanaf het vergrendelscherm om de zaklamp in/uit te schakelen</string>
 </resources>

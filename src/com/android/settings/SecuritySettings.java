@@ -75,6 +75,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String SLIDE_LOCK_DELAY_TOGGLE = "slide_lock_delay_toggle";
     private static final String SLIDE_LOCK_TIMEOUT_DELAY = "slide_lock_timeout_delay";
     private static final String SLIDE_LOCK_SCREENOFF_DELAY = "slide_lock_screenoff_delay";
+    private static final String LOCKSCREEN_LONG_HOME_ACTION = "lockscreen_flashlight";
     private static final String MENU_UNLOCK_PREF = "menu_unlock";
     private static final String LOCKSCREEN_QUICK_UNLOCK_CONTROL = "quick_unlock_control";
     private static final String KEY_LOCK_BEFORE_UNLOCK = "lock_before_unlock";
@@ -96,6 +97,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private CheckBoxPreference mVisibleErrorPattern;
     private CheckBoxPreference mVisibleDots;
     private CheckBoxPreference mTactileFeedback;
+    private CheckBoxPreference mFlashlightPref;
 
     private CheckBoxPreference mMenuUnlock;
     private CheckBoxPreference mQuickUnlockScreen;
@@ -222,6 +224,17 @@ public class SecuritySettings extends SettingsPreferenceFragment
                     .findPreference(LOCKSCREEN_QUICK_UNLOCK_CONTROL);
             mQuickUnlockScreen.setChecked(Settings.System.getInt(resolver,
                     Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL, 0) == 1);
+
+            // Flashlight toggle when long pressing HOME button on lockscreen
+            mFlashlightPref = (CheckBoxPreference) root.findPreference(LOCKSCREEN_LONG_HOME_ACTION);
+            if (getActivity().getApplicationContext().getResources().getBoolean(R.bool.has_led_flash)) {
+                mFlashlightPref.setChecked(Settings.System.getInt(getActivity().getApplicationContext()
+                    .getContentResolver(),
+                    Settings.System.LOCKSCREEN_LONG_HOME_ACTION, 0) == 1);
+            }
+            else {
+                mFlashlightPref.setEnabled(false);
+            }
 
             // Menu Unlock
             mMenuUnlock = (CheckBoxPreference) root.findPreference(MENU_UNLOCK_PREF);
@@ -567,6 +580,10 @@ public class SecuritySettings extends SettingsPreferenceFragment
         } else if (preference == mSlideLockDelayToggle) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.SCREEN_LOCK_SLIDE_DELAY_TOGGLE, isToggled(preference) ? 1 : 0);
+        } else if (preference == mFlashlightPref) {
+            value = mFlashlightPref.isChecked();
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.LOCKSCREEN_LONG_HOME_ACTION, value ? 1 : 0);
         } if (preference == mQuickUnlockScreen) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL, isToggled(preference) ? 1 : 0);

@@ -2440,4 +2440,8 @@
     <!-- Launches Dev Tools -->
     <string name="development_tools_title">開発ツールの起動</string>
 
+    <!-- Lock Screen Flashlight-->
+    <string name="pref_lockscreen_flashlight_title">ロックスクリーン フラッシュライト</string>
+    <string name="pref_lockscreen_flashlight_summary">ロックスクリーン上でHOMEボタン長押しによりフラッシュライトに切り替える</string>
+
 </resources>

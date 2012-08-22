@@ -299,6 +299,11 @@
     <string name="owner_info_settings_title" msgid="2723190010708381889">"Información del propietario"</string>
     <string name="owner_info_settings_summary" msgid="3800834657847339570"></string>
     <string name="owner_info_settings_edit_text_hint" msgid="4608681417960923911">"Introduce el texto que se mostrará en la pantalla de bloqueo."</string>
+
+    <!-- Lock Screen Flashlight-->
+    <string name="pref_lockscreen_flashlight_title">Linterna en pantalla bloqueo</string>
+    <string name="pref_lockscreen_flashlight_summary">La pulsación larga de la tecla Home encenderá o apagará la linterna</string>
+
     <string name="location_settings_title" msgid="8935806698251432196">"Servicios de ubicación"</string>
     <string name="security_settings_title" msgid="7945465324818485460">"Seguridad"</string>
     <string name="security_settings_summary" msgid="967393342537986570">"Establecer Mi ubicación, bloqueo de pantalla, bloqueo de tarjeta SIM y bloqueo de almacenamiento de credenciales"</string>

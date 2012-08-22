@@ -2143,6 +2143,9 @@
     <string name="unlock_menu_unlock_summary">Entsperren des Geräts durch Drücken der Menütaste</string>
     <string name="unlock_quick_unlock_control_title">Schnelles Entsperren</string>
     <string name="unlock_quick_unlock_control_summary">Entsperrt, sobald PIN oder Passwort korrekt eingegeben wurden.</string>
+    <!-- Lock Screen Flashlight-->
+    <string name="pref_lockscreen_flashlight_title">Sperrbildschirm Taschenlampe</string>
+    <string name="pref_lockscreen_flashlight_summary">Langes Drücken der HOME-Taste schaltet die Taschenlampe an/aus</string>
 
     <!-- Slide lock delay -->
     <string name="delay_and_timeout_title">Sperrverzögerung</string>
@@ -2408,4 +2411,8 @@ ice shows the slider widgets before the unlock option [CHAR LIMIT=28]-->
     <string name="ime_switcher_notify_summary">Benachrichtigung zur Auswahl der Eingabemethode in der Statusleiste anzeigen</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
+
+    <!-- Lock Screen Flashlight-->
+    <string name="pref_lockscreen_flashlight_title">Sperrbildschirm Taschenlampe</string>
+    <string name="pref_lockscreen_flashlight_summary">Langes Drücken der HOME-Taste schaltet die Taschenlampe an/aus</string>
 </resources>
