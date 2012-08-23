@@ -2412,7 +2412,4 @@ ice shows the slider widgets before the unlock option [CHAR LIMIT=28]-->
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 
-    <!-- Lock Screen Flashlight-->
-    <string name="pref_lockscreen_flashlight_title">Sperrbildschirm Taschenlampe</string>
-    <string name="pref_lockscreen_flashlight_summary">Langes Drücken der HOME-Taste schaltet die Taschenlampe an/aus</string>
 </resources>

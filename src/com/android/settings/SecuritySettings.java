@@ -581,9 +581,8 @@ public class SecuritySettings extends SettingsPreferenceFragment
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.SCREEN_LOCK_SLIDE_DELAY_TOGGLE, isToggled(preference) ? 1 : 0);
         } else if (preference == mFlashlightPref) {
-            value = mFlashlightPref.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.LOCKSCREEN_LONG_HOME_ACTION, value ? 1 : 0);
+                    Settings.System.LOCKSCREEN_LONG_HOME_ACTION, isToggled(preference) ? 1 : 0);
         } if (preference == mQuickUnlockScreen) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL, isToggled(preference) ? 1 : 0);
