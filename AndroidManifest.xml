@@ -1638,5 +1638,12 @@
             </intent-filter>
         </receiver>
 
+       <!-- Display and Keyboard Brightness -->
+       <service android:name=".cyanogenmod.BkService">
+            <intent-filter>
+                <action android:name=".cyanogenmod.BkService" />
+            </intent-filter>
+       </service>
+
     </application>
 </manifest>

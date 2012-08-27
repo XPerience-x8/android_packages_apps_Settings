@@ -54,6 +54,7 @@ public class BootReceiver extends BroadcastReceiver {
     private static final String SWAP_SIZE_PROP = "persist.sys.swap.size";
     private static String UV_MODULE;
     private static Context myContext;
+    private static Intent mBkService = null;
 
     @Override
     public void onReceive(Context ctx, Intent intent) {
@@ -108,7 +109,13 @@ public class BootReceiver extends BroadcastReceiver {
                 mrunShellCommand.start();
             }
         }
-
+        if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
+            if (mBkService == null) {
+                Log.d("Display and Keyboard Service", "Started");
+                mBkService = new Intent(ctx, com.android.settings.cyanogenmod.BkService.class);
+                ctx.startService(mBkService);
+            }
+        }
     }
 
     private class runShellCommand extends Thread {
