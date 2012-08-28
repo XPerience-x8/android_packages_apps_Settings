@@ -2,6 +2,7 @@ package com.android.settings.cyanogenmod;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.io.File;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -54,30 +55,34 @@ public class LightsController {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					if (cnxt.getResources().getConfiguration().hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_YES) {
-						lockOffButtonBkLight();
-						Log.d("LightSensor Changed",
-								"Keyboard is hidden but Lightsensor changed,Turning Off Keyboard Light");
-					}
-					if (event.values[0] >= 64
-							&& cnxt.getResources().getConfiguration().hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_NO) {
-						lockOffButtonBkLight();
-						Log.d("LightSensor Changed",
-								"Keyboard is open but Lightsensor reports Light");
-					}
+					// Check if keyboard exists
+					File f = new File(LED_BUTTON_BACKLIGHT_Brightness);
+					if (f.isFile() && f.canRead()) {
+						if (cnxt.getResources().getConfiguration().hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_YES) {
+							lockOffButtonBkLight();
+							Log.d("LightSensor Changed",
+									"Keyboard is hidden but Lightsensor changed,Turning Off Keyboard Light");
+						}
+						if (event.values[0] >= 64
+								&& cnxt.getResources().getConfiguration().hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_NO) {
+							lockOffButtonBkLight();
+							Log.d("LightSensor Changed",
+									"Keyboard is open but Lightsensor reports Light");
+						}
 
-					if (event.values[0] <= 0
-							&& cnxt.getResources().getConfiguration().hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_YES) {
-						lockOffButtonBkLight();
-						Log.d("LightSensor Woke up",
-								"Turning Off Keyboard Light");
-					}
+						if (event.values[0] <= 0
+								&& cnxt.getResources().getConfiguration().hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_YES) {
+							lockOffButtonBkLight();
+							Log.d("LightSensor Woke up",
+									"Turning Off Keyboard Light");
+						}
 
-					if (event.values[0] < 64
-							&& cnxt.getResources().getConfiguration().hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_NO) {
-						lockOnButtonBkLight();
-						Log.d("LightSensor Reported",
-								"Its Dark.Turning On Keyboard Light");
+						if (event.values[0] < 64
+								&& cnxt.getResources().getConfiguration().hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_NO) {
+							lockOnButtonBkLight();
+							Log.d("LightSensor Reported",
+									"Its Dark.Turning On Keyboard Light");
+						}
 					}
 				}
 
