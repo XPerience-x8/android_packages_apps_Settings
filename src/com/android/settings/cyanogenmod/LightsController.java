@@ -34,8 +34,8 @@ public class LightsController {
 
 				if (event.sensor.getType() == Sensor.TYPE_LIGHT) {
 
-					Log.d("LightSensor Changed", "Lightsensor value: "
-							+ event.values[0]);
+					/*Log.d("LightSensor Changed", "Lightsensor value: "
+							+ event.values[0]);*/
 					try {
 						if (Settings.System.getInt(cnxt.getContentResolver(),
 								Settings.System.SCREEN_BRIGHTNESS_MODE) == Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC) {
