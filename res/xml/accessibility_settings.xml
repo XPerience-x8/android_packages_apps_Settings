@@ -38,6 +38,11 @@
                 android:persistent="false"/>
 
         <CheckBoxPreference
+                android:key="toggle_back_button_ends_call_preference"
+                android:title="@string/accessibility_back_button_ends_call_title"
+                android:persistent="false"/>
+
+        <CheckBoxPreference
                 android:key="toggle_home_button_answers_call_preference"
                 android:title="@string/accessibility_home_button_answers_call_title"
                 android:persistent="false"/>

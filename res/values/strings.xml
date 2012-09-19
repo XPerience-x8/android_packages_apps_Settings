@@ -2986,6 +2986,8 @@
     <string name="accessibility_home_button_answers_call_title">Home button answers call</string>
     <!-- Title for the accessibility preference to power button to end a call. [CHAR LIMIT=35] -->
     <string name="accessibility_power_button_ends_call_title">Power button ends call</string>
+    <!-- Title for the accessibility preference to back button to end a call. [CHAR LIMIT=35] -->
+    <string name="accessibility_back_button_ends_call_title">Back button ends call</string>
     <!-- Title for the accessibility preference to speak passwords. [CHAR LIMIT=35] -->
     <string name="accessibility_speak_password_title">Speak passwords</string>
     <!-- Title for accessibility preference to choose long-press delay i.e. timeout before it is detected. [CHAR LIMIT=35] -->
