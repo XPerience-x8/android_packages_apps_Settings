@@ -299,7 +299,7 @@
     <string name="owner_info_settings_title" msgid="2723190010708381889">"Info do proprietário"</string>
     <string name="owner_info_settings_summary" msgid="3800834657847339570"></string>
     <string name="owner_info_settings_edit_text_hint" msgid="4608681417960923911">"Digite o texto a ser exibido na tela de bloqueio"</string>
-    <string name="location_settings_title" msgid="8935806698251432196">"Serviços de local"</string>
+    <string name="location_settings_title" msgid="4483843407328665068">"Acesso ao local"</string>
     <string name="security_settings_title" msgid="7945465324818485460">"Segurança"</string>
     <string name="security_settings_summary" msgid="967393342537986570">"Definir Meu local, desbloqueio de tela, bloqueio do SIM e do armazenamento de credenciais"</string>
     <string name="cdma_security_settings_summary" msgid="6068799952798901542">"Definir o Meu local, o desbloqueio de tela, o bloqueio do armazenamento de credenciais"</string>
@@ -899,16 +899,20 @@
     <string name="tethering_help_button_text" msgid="656117495547173630">"Ajuda"</string>
     <string name="network_settings_title" msgid="7967552516440151852">"Redes móveis"</string>
     <string name="location_title" msgid="1029961368397484576">"Meu Local"</string>
-    <string name="location_network_based" msgid="5569673665032992664">"Serv. de loc. do Google"</string>
-    <string name="location_neighborhood_level" msgid="2948129720516513300">"Permitir o envio de dados de localização anônimos ao Google e que aplicativos autorizados usem dados de fontes (como Wi-Fi e redes móveis) para determinar sua localização aproximada."</string>
+    <string name="location_network_based" msgid="7472814266821714527">"Local de rede móvel e Wi-Fi"</string>
+    <string name="location_neighborhood_level" msgid="5626515380188353712">"Permitir que os aplicativos usem o serviço de localização do Google para determinar seu local mais rapidamente. Dados de localização anônimos serão coletados e enviados ao Google."</string>
     <string name="location_neighborhood_level_wifi" msgid="7457348712272184793">"Localização determinada por Wi-Fi"</string>
     <string name="location_gps" msgid="8392461023569708478">"Satélites de GPS"</string>
-    <string name="location_street_level" msgid="4244496898967415234">"Permitir que o aplicativo use o GPS para localizar sua posição"</string>
+    <string name="location_street_level" product="tablet" msgid="1669562198260860802">"Permitir que os aplicativos usem o GPS do tablet para determinar sua posição"</string>
+    <string name="location_street_level" product="default" msgid="4617445745492014203">"Permitir que os aplicativos usem o GPS do telefone para determinar sua posição"</string>
     <string name="assisted_gps" msgid="4649317129586736885">"Usar GPS associado"</string>
     <string name="assisted_gps_enabled" msgid="8751899609589792803">"Usar servidor para auxiliar GPS (desmarque para reduzir o uso da rede)"</string>
     <string name="assisted_gps_disabled" msgid="6982698333968010748">"Usar servidor para auxiliar GPS (desmarque para aprimorar o desempenho do GPS)"</string>
     <string name="use_location_title" msgid="5206937465504979977">"Local. e pesq. do Google"</string>
     <string name="use_location_summary" msgid="3978805802386162520">"Permitir que o Google use sua localização para melhorar os resultados de pesquisa e outros serviços"</string>
+    <string name="location_access_title" msgid="7064108942964081243">"Acesso a minha localização"</string>
+    <string name="location_access_summary" msgid="69031404093194341">"Permitir que os aplicativos que solicitaram sua permissão usem seus dados de localização"</string>
+    <string name="location_sources_heading" msgid="1278732419851088319">"Fontes de localização"</string>
     <string name="about_settings" product="tablet" msgid="593457295516533765">"Sobre o tablet"</string>
     <string name="about_settings" product="default" msgid="1743378368185371685">"Sobre o telefone"</string>
     <string name="about_settings_summary" msgid="3371517697156165959">"Ver informações legais, status, versão do software"</string>
@@ -1883,9 +1887,10 @@
     <string name="status_bar_toggle_brightness_summary">Permite ajustar o brilho deslizando através da barra de status</string>
     <string name="status_bar_toggle_info">Brilho automático está habilitado</string>
     <string name="status_bar_signal_text_title">Alternar exibição de sinal</string>
-    <string name="status_bar_signal_text_show_bars">Barras de sinal</string>
+    <string name="status_bar_style_icon">Ícone</string>
+    <string name="status_bar_style_hidden">Oculto</string>
     <string name="status_bar_signal_text_show_text">Texto de sinal</string>
-    <string name="status_bar_signal_text_hidden">Oculto</string>
+    <string name="status_bar_battery_status_percentage">Porcentagem</string>
     <string name="lock_screen_title">Tela de bloqueio</string>
     <string name="lockscreen_target_info">Arraste o botão para os alvos para criar atalhos</string>
     <string name="lockscreen_target_title">Atalhos da tela de bloqueio</string>
@@ -2288,4 +2293,15 @@
     <string name="navigation_bar_menu_locked">Travada</string>
     <string name="cmupdate_settings_title">Atualizações CyanogenMod</string>
     <string name="cmupdate_settings_summary">Verifique por, visualizar ou instalar atualizações disponíveis</string>
+    <string name="dock_force_undock_title">Forçar retirada do dock</string>
+    <string name="dock_force_undock_summary_no_dock" product="tablet">O Tablet não está encaixado no dock</string>
+    <string name="dock_force_undock_summary_no_dock" product="default">O Telefone não está encaixado no dock</string>
+    <string name="dock_force_undock_summary" product="tablet">Desencaixar o Tablet do dock</string>
+    <string name="dock_force_undock_summary" product="default">Desencaixar o Telefone do dock</string>
+    <string name="status_bar_battery_status_circle">Círculo</string>
+    <string name="status_bar_battery_status_circle_percentage">Círculo com porcentagem</string>
+    <string name="app_security_title">Segurança dos aplicativos</string>
+    <string name="sms_security_check_limit_title">Limite de mensagens SMS</string>
+    <string name="sms_security_check_limit_summary">Alertar previnindo que aplicações enviem muitas mensagens SMS. Limite atual: Até %d mensagens durante 15 minutos</string>
+    <string name="sms_security_check_limit_default">30 (Padrão)</string>
 </resources>

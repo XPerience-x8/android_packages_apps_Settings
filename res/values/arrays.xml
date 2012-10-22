@@ -1026,22 +1026,26 @@
         <item>2</item>
     </string-array>
 
-    <string-array name="entries_status_bar_battery">
-        <item>Icon (default)</item>
-        <item>Percentage</item>
-        <item>Hidden</item>
+    <string-array name="entries_status_bar_battery" translatable="false">
+        <item>@string/status_bar_style_icon</item>
+        <item>@string/status_bar_battery_status_percentage</item>
+        <item>@string/status_bar_battery_status_circle</item>
+        <item>@string/status_bar_battery_status_circle_percentage</item>
+        <item>@string/status_bar_style_hidden</item>
     </string-array>
 
     <string-array name="values_status_bar_battery" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
+        <item>3</item>
+        <item>4</item>
     </string-array>
 
      <string-array name="entries_status_bar_signal" translatable="false">
-        <item>@string/status_bar_signal_text_show_bars</item>
+        <item>@string/status_bar_style_icon</item>
         <item>@string/status_bar_signal_text_show_text</item>
-        <item>@string/status_bar_signal_text_hidden</item>
+        <item>@string/status_bar_style_hidden</item>
      </string-array>
 
      <string-array name="values_status_bar_signal" translatable="false">
@@ -1242,7 +1246,7 @@
     </string-array>
 
     <string-array name="notification_pulse_length_values" translatable="false">
-        <item>0</item>
+        <item>1</item>
         <item>250</item>
         <item>500</item>
         <item>1000</item>
@@ -1450,6 +1454,27 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
+    </string-array>
+
+    <!--- Sms security limit -->
+    <string-array name="sms_security_check_limit_entries" translatable="false">
+        <item>15</item>
+        <item>@string/sms_security_check_limit_default</item>
+        <item>50</item>
+        <item>100</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+    </string-array>
+
+    <string-array name="sms_security_check_limit_values" translatable="false">
+        <item>15</item>
+        <item>30</item>
+        <item>50</item>
+        <item>100</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
     </string-array>
 
     <!-- **** CYANOGENMOD EDITS END **** -->
