@@ -113,16 +113,18 @@ public class LightsController {
 	}
 
 	public static void WriteFile(String text, String file) {
-		try {
-			FileWriter fstream = new FileWriter(file);
-			BufferedWriter out = new BufferedWriter(fstream);
-			out.write(text);
-			out.close();
-			fstream.close();
-		} catch (Exception e) {
-			e.printStackTrace();
+		File f = new File(file);
+		if (f.isFile() && f.canRead()) {
+			try {
+				FileWriter fstream = new FileWriter(file);
+				BufferedWriter out = new BufferedWriter(fstream);
+				out.write(text);
+				out.close();
+				fstream.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
-
 	}
 
 	public static void initialize() {
