@@ -2478,7 +2478,7 @@ Schakel het scherm uit om de geselecteerde melding in actie te zien of annuleer 
     <string name="allow_mock_sms">Nep-SMS toestaan</string>
 
    <!-- CM Updater -->
-    <string name="cmupdate_settings_title">CyanogenMod-updates</string>
+    <string name="cmupdate_settings_title">MiniCM-updates</string>
     <string name="cmupdate_settings_summary">Controleren op updates</string>
 
     <string name="dock_force_undock_title">Geforceerd ontkoppelen</string>

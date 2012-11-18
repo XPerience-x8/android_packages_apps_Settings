@@ -2508,7 +2508,7 @@ ice shows the slider widgets before the unlock option [CHAR LIMIT=28]-->
     <string name="volume_key_cursor_control_on_reverse">Lautstärkewippe oben/unten bewegt den Cursor nach rechts/links</string>
 
     <!-- CM Updater -->
-    <string name="cmupdate_settings_title">CyanogenMod Updates</string>
+    <string name="cmupdate_settings_title">MiniCM Updates</string>
     <string name="cmupdate_settings_summary">Auf neue Versionen prüfen und diese installieren.</string>
 
     <!--- Sms security limit -->

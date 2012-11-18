@@ -2522,7 +2522,7 @@
     <string name="volume_key_cursor_control_on_reverse">音量上/下将会使光标右/左移动</string>
 
     <!-- CM Updater -->
-    <string name="cmupdate_settings_title">CyanogenMod 更新</string>
+    <string name="cmupdate_settings_title">MiniCM 更新</string>
     <string name="cmupdate_settings_summary">检查, 查看, 或安装可用的更新</string>
 
     <!--- Sms security limit -->

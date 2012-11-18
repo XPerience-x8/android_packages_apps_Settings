@@ -2404,7 +2404,7 @@
     <string name="volume_key_cursor_control_on">Ses tuşları imleci sola/sağa taşır</string>
     <string name="volume_key_cursor_control_on_reverse">Ses tuşları imleci sağa/sola taşır</string>
     <!-- CM Updater -->
-    <string name="cmupdate_settings_title">CyanogenMod güncellemeleri</string>
+    <string name="cmupdate_settings_title">MiniCM güncellemeleri</string>
     <string name="cmupdate_settings_summary">Güncellemeleri kontrol et ve kur</string>
     <!--- Sms security limit -->
     <string name="app_security_title">Uygulama güvenliği</string>

@@ -2305,7 +2305,7 @@
     <string name="volume_key_cursor_control_off">Deshabilitado</string>
     <string name="volume_key_cursor_control_on">Los botones subir y bajar volumen moverán el cursor a izquierda y derecha respectivamente</string>
     <string name="volume_key_cursor_control_on_reverse">Los botones subir y bajar volumen moverán el cursor a derecha e izquierda respectivamente</string>
-    <string name="cmupdate_settings_title">Actualizaciones CyanogenMod</string>
+    <string name="cmupdate_settings_title">Actualizaciones MiniCM</string>
     <string name="cmupdate_settings_summary">Comprobar, ver e instalar actualizaciones disponibles</string>
     <string name="app_security_title">Seguridad en aplicaciones</string>
     <string name="sms_security_check_limit_title">Límite de mensajes SMS</string>

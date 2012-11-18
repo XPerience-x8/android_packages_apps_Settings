@@ -2459,7 +2459,7 @@
     <string name="volume_key_cursor_control_on_reverse">Glasnoća gore/dole pomiče pokazivač desno/lijevo</string>
 
     <!-- CM Updater -->
-    <string name="cmupdate_settings_title">CyanogenMod ažuriranja</string>
+    <string name="cmupdate_settings_title">MiniCM ažuriranja</string>
     <string name="cmupdate_settings_summary">Potraži, pogledaj ili instaliraj dostupna ažuriranja</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->

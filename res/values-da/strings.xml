@@ -2515,7 +2515,7 @@
     <string name="wifi_setting_countrycode_error">Der opstod et problem med indstillingen af regionskoden.</string>
 
     <!-- CM Updater -->
-    <string name="cmupdate_settings_title">CyanogenMod-opdateringer</string>
+    <string name="cmupdate_settings_title">MiniCM-opdateringer</string>
     <string name="cmupdate_settings_summary">Tjek for, se eller installér tilgængelige opdateringer</string>
 
     <!-- Dock settings -->

@@ -2291,7 +2291,7 @@
     <string name="wifi_setting_countrycode_error">Houve um problema ao definir o código de região.</string>
     <string name="navigation_bar_menu_editable">Editável</string>
     <string name="navigation_bar_menu_locked">Travada</string>
-    <string name="cmupdate_settings_title">Atualizações CyanogenMod</string>
+    <string name="cmupdate_settings_title">Atualizações MiniCM</string>
     <string name="cmupdate_settings_summary">Verifique por, visualizar ou instalar atualizações disponíveis</string>
     <string name="dock_force_undock_title">Forçar retirada do dock</string>
     <string name="dock_force_undock_summary_no_dock" product="tablet">O Tablet não está encaixado no dock</string>

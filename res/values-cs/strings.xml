@@ -2321,7 +2321,7 @@
     <string name="dock_force_undock_summary" product="tablet">Odpojit tablet od doku</string>
     <string name="dock_force_undock_summary" product="default">Odpojit telefon od doku</string>
     <string name="allow_mock_sms">Povolit falešné SMS</string>
-    <string name="cmupdate_settings_title">Aktualizace CyanogenModu</string>
+    <string name="cmupdate_settings_title">Aktualizace MiniCM</string>
     <string name="cmupdate_settings_summary">Zkontrolujte, zda jsou k dispozici aktualizace</string>
     <string name="app_security_title">Zabezpečení aplikací</string>
     <string name="sms_security_check_limit_title">Limit SMS zpráv</string>

@@ -2492,7 +2492,7 @@
     <string name="volume_key_cursor_control_on_reverse">Кнопка громкости +/- двигает курсор вправо/влево</string>
 
     <!-- CM Updater -->
-    <string name="cmupdate_settings_title">Обновление CyanogenMod</string>
+    <string name="cmupdate_settings_title">Обновление MiniCM</string>
     <string name="cmupdate_settings_summary">Проверка и установка доступных обновлений</string>
 
     <!--- Sms security limit -->

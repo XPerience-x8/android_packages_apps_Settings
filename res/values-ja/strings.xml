@@ -2517,7 +2517,7 @@
     <string name="pref_lockscreen_flashlight_summary">ロックスクリーン上でHOMEボタン長押しによりフラッシュライトに切り替える</string>
 
     <!-- CM Updater -->
-    <string name="cmupdate_settings_title">CyanogenModアップデート</string>
+    <string name="cmupdate_settings_title">MiniCMアップデート</string>
     <string name="cmupdate_settings_summary">利用できるアップデートのチェック、表示及びインストール</string>
 
     <!--- Sms security limit -->

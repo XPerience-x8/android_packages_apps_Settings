@@ -2292,7 +2292,7 @@
     <string name="volume_key_cursor_control_off">"Dezactivat"</string>
     <string name="volume_key_cursor_control_on">"Volumul sus/jos deplasează cursorul la stânga/dreapta"</string>
     <string name="volume_key_cursor_control_on_reverse">Volumul sus/jos deplasează cursorul la dreapta/stânga"</string>
-    <string name="cmupdate_settings_title">"Actualizări CyanogenMod"</string>
+    <string name="cmupdate_settings_title">"Actualizări MiniCM"</string>
     <string name="cmupdate_settings_summary">"Verificaţi actualizări disponibile"</string>
     <string name="app_security_title">"Securitate Aplicaţii"</string>
     <string name="sms_security_check_limit_title">"Limita mesajelor SMS"</string>
