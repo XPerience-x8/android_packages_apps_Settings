@@ -34,14 +34,6 @@
         android:fragment="com.android.settings.cyanogenmod.TabletPowerWidget"
         android:title="@string/notification_drawer_title" />
 
-    <PreferenceScreen 
-        android:key="updatenotify_settings"
-        android:title="@string/updatenotify_title" android:summary="@string/updatenotify_summary">
-        <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.updatenotify"
-            android:targetClass="com.cyanogenmod.updatenotify.MainActivity" />
-    </PreferenceScreen>
-
     <PreferenceScreen
         android:key="wallpaper"
         android:title="@string/wallpaper_settings_title"

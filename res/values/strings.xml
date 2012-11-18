@@ -4889,10 +4889,6 @@
     <string name="increasing_ring_interval_5seconds">5 seconds</string>
     <string name="increasing_ring_interval_10seconds">10 seconds</string>
 
-    <!--  Update Notifications -->
-    <string name="updatenotify_title">Update notifications</string>
-    <string name="updatenotify_summary">Get push notifications of updates</string>
-
     <string name="profile_write_nfc_tag">Write to NFC tag</string>
     <string name="profile_write_touch_tag">Touch tag to write</string>
     <string name="profile_write_success">Tag successfully written</string>
