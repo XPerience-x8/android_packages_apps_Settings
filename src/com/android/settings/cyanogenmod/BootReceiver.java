@@ -295,14 +295,14 @@ public class BootReceiver extends BroadcastReceiver {
             outputStream.flush();
             outputStream.writeBytes("exit\n");
             outputStream.flush();
-            process.waitFor();
+            //process.waitFor();
         }
         catch (IOException e) {
             return false;
         }
-        catch (InterruptedException e) {
+        /*catch (InterruptedException e) {
             return false;
-        }
+        }*/
         return true;
     }
 }
