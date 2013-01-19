@@ -20,7 +20,8 @@ public class LightsController {
 	static String LED_BUTTON_MODE_user = "/sys/devices/platform/msm_pmic_misc_led.0/control::mode";
 	static String LED_BUTTON_BACKLIGHT_Current_ma = "/sys/devices/platform/msm_pmic_misc_led.0/max::current_ma";
 	static String LED_BUTTON_BACKLIGHT_cut_off = "/sys/devices/platform/msm_pmic_misc_led.0/als::cut-off";
-	static String DISPLAY_BRIGHTNESS = "/sys/devices/platform/i2c-adapter/i2c-0/0-0036/br::intensity";
+	static String DISPLAY_BRIGHTNESS1 = "/sys/devices/platform/i2c-adapter/i2c-0/0-0036/br::intensity";
+	static String DISPLAY_BRIGHTNESS2 = "/sys/devices/i2c-0/0-0036/br::intensity";
 
 	public LightsController(final Context cnxt) {
 
@@ -101,7 +102,14 @@ public class LightsController {
 
 	public static void WriteDisplay(int text) {
 		try {
-			FileWriter fstream = new FileWriter(DISPLAY_BRIGHTNESS);
+			File f = new File(DISPLAY_BRIGHTNESS1);
+			FileWriter fstream;
+			if (f.isFile() && f.canRead()) {
+				fstream = new FileWriter(DISPLAY_BRIGHTNESS1);
+			}
+			else {
+				fstream = new FileWriter(DISPLAY_BRIGHTNESS2);
+			}
 			BufferedWriter out = new BufferedWriter(fstream);
 			out.write(String.valueOf(text));
 			out.close();
