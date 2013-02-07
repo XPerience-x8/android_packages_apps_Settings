@@ -17,6 +17,7 @@
 package com.android.settings.cyanogenmod;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -185,9 +186,9 @@ public class Processor extends SettingsPreferenceFragment implements
         mUndervoltPref = (CheckBoxPreference) prefScreen.findPreference(UNDERVOLT);
         mUndervoltPref.setOnPreferenceChangeListener(this);
         if (SystemProperties.getInt(UNDERVOLT_PERSIST_PROP, UNDERVOLT_DEFAULT) == 0)
-		    mUndervoltPref.setChecked(false);
-	    else
-		    mUndervoltPref.setChecked(true);
+                    mUndervoltPref.setChecked(false);
+            else
+                    mUndervoltPref.setChecked(true);
 
         // Cur frequency
         if (!Utils.fileExists(FREQ_CUR_FILE)) {
@@ -243,17 +244,39 @@ public class Processor extends SettingsPreferenceFragment implements
             if (preference == mUndervoltPref) {
                 UV_MODULE = getResources().getString(R.string.undervolting_module);
                 value = mUndervoltPref.isChecked();
-                if (value==true) {
-		            SystemProperties.set(UNDERVOLT_PERSIST_PROP, "0");
-		            //remove the undervolting module
-		            insmod(UV_MODULE, false);
+                if (value == true) {
+                    SystemProperties.set(UNDERVOLT_PERSIST_PROP, "0");
+                    String vdd_levels_path = "/sys/devices/system/cpu/cpu0/cpufreq/vdd_levels";
+                    File vdd_levels = new File(vdd_levels_path);
+                    if (vdd_levels.isFile() && vdd_levels.canRead()) {
+                        Utils.fileWriteOneLine(vdd_levels_path, "122880 3");
+                        Utils.fileWriteOneLine(vdd_levels_path, "245760 4");
+                        Utils.fileWriteOneLine(vdd_levels_path, "320000 5");
+                        Utils.fileWriteOneLine(vdd_levels_path, "480000 6");
+                        Utils.fileWriteOneLine(vdd_levels_path, "604800 7");
+                    }
+                    else {
+                        //remove the undervolting module for .29 kernel
+                        insmod(UV_MODULE, false);
+                    }
                 }
                 else {
-		            SystemProperties.set(UNDERVOLT_PERSIST_PROP, "1");
-		            //insmod the undervolting module
-		            insmod(UV_MODULE, true);
+                    SystemProperties.set(UNDERVOLT_PERSIST_PROP, "1");
+                    String vdd_levels_path = "/sys/devices/system/cpu/cpu0/cpufreq/vdd_levels";
+                    File vdd_levels = new File(vdd_levels_path);
+                    if (vdd_levels.isFile() && vdd_levels.canRead()) {
+                        Utils.fileWriteOneLine(vdd_levels_path, "122880 0");
+                        Utils.fileWriteOneLine(vdd_levels_path, "245760 2");
+                        Utils.fileWriteOneLine(vdd_levels_path, "320000 3");
+                        Utils.fileWriteOneLine(vdd_levels_path, "480000 5");
+                        Utils.fileWriteOneLine(vdd_levels_path, "604800 6");
+                    }
+                    else {
+                        //insmod the undervolting module for .29 kernel
+                        insmod(UV_MODULE, true);
+                    }
                 }
-		        return true;
+                return true;
             }
             if (preference == mGovernorPref) {
                 fname = GOV_FILE;

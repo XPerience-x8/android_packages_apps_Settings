@@ -34,6 +34,7 @@ import com.android.settings.Utils;
 
 import java.util.Arrays;
 import java.util.List;
+import java.io.File;
 import java.io.IOException;
 import java.io.DataOutputStream;
 import java.io.DataInputStream;
@@ -179,14 +180,31 @@ public class BootReceiver extends BroadcastReceiver {
         }
 
         UV_MODULE = ctx.getResources().getString(com.android.settings.R.string.undervolting_module);
-	    if (SystemProperties.getBoolean(UNDERVOLTING_PROP, false) == true) {
-            // insmod undervolting module
-            insmod(UV_MODULE, true);
+	if (SystemProperties.getBoolean(UNDERVOLTING_PROP, false) == true) {
+            String vdd_levels_path = "/sys/devices/system/cpu/cpu0/cpufreq/vdd_levels";
+            File vdd_levels = new File(vdd_levels_path);
+            if (vdd_levels.isFile() && vdd_levels.canRead()) {
+                Utils.fileWriteOneLine(vdd_levels_path, "122880 0");
+                Utils.fileWriteOneLine(vdd_levels_path, "245760 2");
+                Utils.fileWriteOneLine(vdd_levels_path, "320000 3");
+                Utils.fileWriteOneLine(vdd_levels_path, "480000 5");
+                Utils.fileWriteOneLine(vdd_levels_path, "604800 6");
+            }
+            else
+                // insmod undervolting module for .29 kernel
+                insmod(UV_MODULE, true);
         }
         else {
-            // remove undervolting module
-            //insmod(UV_MODULE, false);
-	    }
+            String vdd_levels_path = "/sys/devices/system/cpu/cpu0/cpufreq/vdd_levels";
+            File vdd_levels = new File(vdd_levels_path);
+            if (vdd_levels.isFile() && vdd_levels.canRead()) {
+                Utils.fileWriteOneLine(vdd_levels_path, "122880 3");
+                Utils.fileWriteOneLine(vdd_levels_path, "245760 4");
+                Utils.fileWriteOneLine(vdd_levels_path, "320000 5");
+                Utils.fileWriteOneLine(vdd_levels_path, "480000 6");
+                Utils.fileWriteOneLine(vdd_levels_path, "604800 7");
+            }
+	}
 
         String governor = prefs.getString(Processor.GOV_PREF, null);
         String minFrequency = prefs.getString(Processor.FREQ_MIN_PREF, null);
