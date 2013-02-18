@@ -87,10 +87,16 @@ public class BootReceiver extends BroadcastReceiver {
         }
 
         if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
-            if (getUltraBrightnessMode(ctx, 0) == 1)
-                writeOneLine("/sys/devices/platform/i2c-adapter/i2c-0/0-0036/mode", "i2c_pwm");
+            File f = new File("/sys/devices/platform/i2c-adapter/i2c-0/0-0036/mode");
+            String modeFile = "";
+            if (f.isFile() && f.canRead())
+                modeFile = "/sys/devices/platform/i2c-adapter/i2c-0/0-0036/mode";
             else
-                writeOneLine("/sys/devices/platform/i2c-adapter/i2c-0/0-0036/mode", "i2c_pwm_als");
+                modeFile = "/sys/devices/i2c-0/0-0036/mode";
+            if (getUltraBrightnessMode(ctx, 0) == 1)
+                writeOneLine(modeFile, "i2c_pwm");
+            else
+                writeOneLine(modeFile, "i2c_pwm_als");
         }
 
         if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED) || intent.getAction().equals(Intent.ACTION_MEDIA_MOUNTED)) {
