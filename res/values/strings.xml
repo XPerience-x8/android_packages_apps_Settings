@@ -4759,10 +4759,10 @@
     <string name="swap_toast_swap_enabled">Swap enabled</string>
     <string name="swap_toast_swap_disabled">Swap disabled</string>
     <string name="swap_toast_wait">Please wait...</string>
-    <string name="swap_info_title">Swap Information</string>
-    <string name="swap_dialog">Swap Information</string>
-    <string name="swap_loading">Loading Swap information\u2026</string>
-    <string name="swap_error">Error loading Swap information\u2026</string>
+    <string name="swap_info_title">Memory Information</string>
+    <string name="swap_dialog">Memory Information</string>
+    <string name="swap_loading">Loading Memory information\u2026</string>
+    <string name="swap_error">Error loading Memory information\u2026</string>
 
     <!-- Partition Info -->
     <string name="partition_info_title">Partition info</string>
