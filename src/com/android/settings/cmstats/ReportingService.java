@@ -39,6 +39,11 @@ import android.util.Log;
 import com.android.settings.R;
 import com.android.settings.Settings;
 
+import com.google.analytics.tracking.android.GoogleAnalytics;
+import com.google.analytics.tracking.android.Tracker;
+
+import com.android.settings.R;
+
 public class ReportingService extends Service {
     protected static final String TAG = "CMStats";
 
@@ -49,19 +54,14 @@ public class ReportingService extends Service {
 
     @Override
     public int onStartCommand (Intent intent, int flags, int startId) {
-        if (intent.getBooleanExtra("firstBoot", false)) {
-            promptUser();
-            Log.d(TAG, "Prompting user for opt-in.");
-        } else {
-            Log.d(TAG, "User has opted in -- reporting.");
-            Thread thread = new Thread() {
-                @Override
-                public void run() {
-                    report();
-                }
-            };
-            thread.start();
-        }
+        Log.d(TAG, "User has opted in -- reporting.");
+        Thread thread = new Thread() {
+            @Override
+            public void run() {
+                report();
+            }
+        };
+        thread.start();
         return Service.START_REDELIVER_INTENT;
     }
 
@@ -80,6 +80,26 @@ public class ReportingService extends Service {
         Log.d(TAG, "SERVICE: Carrier=" + deviceCarrier);
         Log.d(TAG, "SERVICE: Carrier ID=" + deviceCarrierId);
 
+        // report to google analytics
+        GoogleAnalytics ga = GoogleAnalytics.getInstance(this);
+        Tracker tracker = ga.getTracker(getString(R.string.ga_trackingId));
+        tracker.sendEvent(deviceName, deviceVersion, deviceCountry, null);
+        // this really should be set at build time...
+        // format of version should be:
+        // version[-date-type]-device
+        String[] parts = deviceVersion.split("-");
+        String deviceVersionNoDevice = null;
+        if (parts.length == 2) {
+            deviceVersionNoDevice = parts[0];
+        }
+        else if (parts.length == 4) {
+            deviceVersionNoDevice = parts[0] + "-" + parts[2];
+        }
+        if (deviceVersionNoDevice != null)
+            tracker.sendEvent("checkin", deviceName, deviceVersionNoDevice, null);
+        tracker.close();
+
+        // report to the cmstats service
         HttpClient httpclient = new DefaultHttpClient();
         HttpPost httppost = new HttpPost("http://stats.cyanogenmod.org/submit");
         try {
@@ -99,21 +119,5 @@ public class ReportingService extends Service {
         }
         ReportingServiceManager.setAlarm(this);
         stopSelf();
-    }
-
-    private void promptUser() {
-        NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        Intent nI = new Intent();
-        nI.setComponent(new ComponentName(getPackageName(),Settings.AnonymousStatsActivity.class.getName()));
-        PendingIntent pI = PendingIntent.getActivity(this, 0, nI, 0);
-        Notification.Builder builder = new Notification.Builder(this)
-        .setSmallIcon(R.drawable.ic_cm_stats_notif)
-        .setAutoCancel(true)
-        .setTicker(getString(R.string.anonymous_statistics_title))
-        .setContentIntent(pI)
-        .setWhen(0)
-        .setContentTitle(getString(R.string.anonymous_statistics_title))
-        .setContentText(getString(R.string.anonymous_notification_desc));
-        nm.notify(1, builder.getNotification());
     }
 }
