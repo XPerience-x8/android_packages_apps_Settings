@@ -17,6 +17,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/about_settings">
 
+<!--XPERIENCE LOGO
+<PreferenceScreen android:key="xpe_logo"
+                          android:layout="@layout/logo_row" />
+-->
+
         <!-- Additional System Update menu -->
         <PreferenceScreen android:key="additional_system_update_settings"
                 android:title="@string/additional_system_update_settings_list_item_title">
@@ -164,5 +169,12 @@
                 style="?android:preferenceInformationStyle"
                 android:title="@string/build_number"
                 android:summary="@string/device_info_default"/>
+
+       <!--Developer XPE TEAM-->
+        <Preference android:key="xpe_dev"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/builder_info_title"/>
+ 
+ 
 
 </PreferenceScreen>
