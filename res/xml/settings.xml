@@ -19,44 +19,32 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/settings_label"
     android:key="parent">
+<PreferenceCategory android:title="@string/settings_ics_radio" >
 
-        <com.android.settings.IconPreferenceScreen
-            android:title="@string/radio_controls_title"
-            settings:icon="@drawable/ic_settings_wireless">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.settings"
-                android:targetClass="com.android.settings.WirelessSettings" />
-        </com.android.settings.IconPreferenceScreen>
+<CheckBoxPreference
+        android:key="toggle_wifi"
+        android:title="@string/wifi_quick_toggle_title"
+        android:summary="@string/wifi_quick_toggle_summary"
+        android:persistent="false"
+        settings:icon="@drawable/ic_settings_wireless"/>
+        
+        <CheckBoxPreference
+        android:key="toggle_bluetooth"
+        android:title="@string/bluetooth_quick_toggle_title"
+        android:summary="@string/bluetooth_quick_toggle_summary"
+        android:persistent="false" />
 
-        <com.android.settings.IconPreferenceScreen
-            android:key="call_settings"
-            settings:icon="@drawable/ic_settings_call"
-            android:title="@string/call_settings_title">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.phone"
-                android:targetClass="com.android.phone.CallFeaturesSetting" />
-        </com.android.settings.IconPreferenceScreen>
+<com.android.settings.IconPreferenceScreen
+        android:title="@string/settings_radio_more">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.settings"
+            android:targetClass="com.android.settings.WirelessSettings" />
+</com.android.settings.IconPreferenceScreen>
+</PreferenceCategory>
+<!--END OF CATEGORY RADIO-->
 
-	<!-- CM Settings -->
-        <com.android.settings.IconPreferenceScreen
-            settings:icon="@drawable/ic_cyanogenmod"
-            android:title="@string/cm_settings_title">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.cyanogenmod.cmparts"
-                android:targetClass="com.cyanogenmod.cmparts.activities.MainActivity" />
-        </com.android.settings.IconPreferenceScreen>
-
-       <!-- Device Settings -->
-       <com.android.settings.IconPreferenceScreen
-           android:key="device_settings"
-           settings:icon="@drawable/ic_settings_device"
-           android:title="@string/device_settings_title">
-           <intent
-               android:action="com.cyanogenmod.action.LAUNCH_DEVICE_SETTINGS"/>
-       </com.android.settings.IconPreferenceScreen>
+<PreferenceCategory android:title="@string/settings_ics_device" >
 
         <!-- Launcher -->
 
@@ -66,11 +54,12 @@
             android:key="launcher_settings">
             <intent
                 android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.launcher"
-                android:targetClass="com.android.launcher.MyLauncherSettings" />
+                android:targetPackage="com.mobint.hololauncher"
+                android:targetClass="com.mobint.hololauncher.settings" />
         </com.android.settings.IconPreferenceScreen>
 
-        <!-- Sound -->
+        
+               <!-- Sound -->
 
         <com.android.settings.IconPreferenceScreen
             settings:icon="@drawable/ic_settings_sound"
@@ -79,6 +68,18 @@
                 android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.settings"
                 android:targetClass="com.android.settings.SoundSettings" />
+        </com.android.settings.IconPreferenceScreen>
+
+<!--CALL SETTINGS-->
+
+        <com.android.settings.IconPreferenceScreen
+            android:key="call_settings"
+            settings:icon="@drawable/ic_settings_call"
+            android:title="@string/call_settings_title">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.phone"
+                android:targetClass="com.android.phone.CallFeaturesSetting" />
         </com.android.settings.IconPreferenceScreen>
 
         <!-- Profiles -->
@@ -103,17 +104,16 @@
                 android:targetClass="com.android.settings.DisplaySettings" />
         </com.android.settings.IconPreferenceScreen>
 
-        <!-- Security & Location -->
+<!-- Storage -->
 
         <com.android.settings.IconPreferenceScreen
-            settings:icon="@drawable/ic_settings_security"
-            android:title="@string/security_settings_title"
-            android:key="security_settings">
-            <intent
-                android:action="android.intent.action.MAIN"
+            settings:icon="@drawable/ic_settings_storage"
+            android:title="@string/storage_settings">
+            <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.settings"
-                android:targetClass="com.android.settings.SecuritySettings" />
+                android:targetClass="com.android.settings.deviceinfo.Memory" />
         </com.android.settings.IconPreferenceScreen>
+
 
         <!-- Application Settings -->
 
@@ -126,7 +126,41 @@
                 android:targetPackage="com.android.settings"
                 android:targetClass="com.android.settings.ApplicationSettings" />
         </com.android.settings.IconPreferenceScreen>
+</PreferenceCategory>
 
+
+
+<PreferenceCategory android:title="@string/settings_ics_interface" >
+<!-- Theme Chooser -->
+
+        <com.android.settings.IconPreferenceScreen
+            settings:icon="@drawable/ic_settings_themes"
+            android:title="@string/themes_settings"
+            android:key="theme_settings">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.tmobile.themechooser"
+                android:targetClass="com.tmobile.themechooser.ThemeChooser" />
+        </com.android.settings.IconPreferenceScreen>
+</PreferenceCategory>
+
+
+
+<PreferenceCategory android:title="@string/settings_ics_personal">
+	
+        <!-- Security & Location -->
+
+        <com.android.settings.IconPreferenceScreen
+            settings:icon="@drawable/ic_settings_security"
+            android:title="@string/security_settings_title"
+            android:key="security_settings">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.android.settings.SecuritySettings" />
+        </com.android.settings.IconPreferenceScreen>
+
+        
         <!-- Data Sync. The settings activity will ensure this is resolved to an
              activity on the system image, otherwise it will remove this
              preference. -->
@@ -150,15 +184,6 @@
                 android:targetClass="com.android.settings.PrivacySettings" />
         </com.android.settings.IconPreferenceScreen>
 
-        <!-- Storage -->
-
-        <com.android.settings.IconPreferenceScreen
-            settings:icon="@drawable/ic_settings_storage"
-            android:title="@string/storage_settings">
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.settings"
-                android:targetClass="com.android.settings.deviceinfo.Memory" />
-        </com.android.settings.IconPreferenceScreen>
 
         <!-- Language -->
 
@@ -193,7 +218,7 @@
                 android:targetClass="com.android.settings.AccessibilitySettings" />
         </com.android.settings.IconPreferenceScreen>
 
-        <!-- Dock -->
+        <!-- Dock NO DOCK FOR NOW 
 
         <com.android.settings.IconPreferenceScreen
             android:key="dock_settings"
@@ -203,7 +228,7 @@
                 android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.settings"
                 android:targetClass="com.android.settings.DockSettings" />
-        </com.android.settings.IconPreferenceScreen>
+        </com.android.settings.IconPreferenceScreen>-->
 
         <!-- Date & Time -->
 
@@ -216,6 +241,30 @@
                 android:targetClass="com.android.settings.DateTimeSettings" />
         </com.android.settings.IconPreferenceScreen>
 
+</PreferenceCategory>
+
+<PreferenceCategory android:title="@string/settings_ics_development" >
+<!-- Development -->
+<com.android.settings.IconPreferenceScreen
+android:title="@string/development_settings_title"
+settings:icon="@drawable/ic_settings_development">
+<intent
+android:action="android.intent.action.MAIN"
+android:targetPackage="com.android.settings"
+android:targetClass="com.android.settings.DevelopmentSettings" />
+</com.android.settings.IconPreferenceScreen>
+
+<!-- CM Settings -->
+        <com.android.settings.IconPreferenceScreen
+            settings:icon="@drawable/ic_cyanogenmod"
+            android:title="@string/cm_settings_title">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.MainActivity" />
+        </com.android.settings.IconPreferenceScreen>
+
+
         <!-- About Device -->
 
         <com.android.settings.IconPreferenceScreen
@@ -226,5 +275,5 @@
                 android:targetPackage="com.android.settings"
                 android:targetClass="com.android.settings.DeviceInfoSettings" />
         </com.android.settings.IconPreferenceScreen>
-
+</PreferenceCategory>
 </PreferenceScreen>
