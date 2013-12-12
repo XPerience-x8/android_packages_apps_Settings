@@ -1572,4 +1572,18 @@
     <string name="increasing_ring_interval_3seconds">3 segundos</string>
     <string name="increasing_ring_interval_5seconds">5 segundos</string>
     <string name="increasing_ring_interval_10seconds">10 segundos</string>
+
+<!--XPERIENCE-->
+<string name="settings_ics_device"> Dispositivo</string>
+<string name="settings_ics_radio"> Radio</string>
+<string name="settings_ics_system"> Sistema</string>
+<string name="settings_ics_personal"> Personal</string>
+<string name="settings_ics_interface"> Interfáz</string>
+<string name="settings_radio_more"> Más...</string>
+<string name="performance_settings_title_head"> Rendimiento</string>
+<string name="power_usage_summary_text"> Uso de Batería</string>
+<string name="settings_hololauncher"> Holo</string>
+<string name="themes_settings"> Temas</string>
+<string name="builder_info_title"> Desarrollador XPE </string>
+<string name="settings_ics_development" > Desarrollo </string>
 </resources>
