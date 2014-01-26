@@ -52,9 +52,9 @@ public class WirelessSettings extends PreferenceActivity {
 
     private AirplaneModeEnabler mAirplaneModeEnabler;
     private CheckBoxPreference mAirplaneModePreference;
-    private WifiEnabler mWifiEnabler;
+  //  private WifiEnabler mWifiEnabler;
     private NfcEnabler mNfcEnabler;
-    private BluetoothEnabler mBtEnabler;
+//    private BluetoothEnabler mBtEnabler;
 
     /**
      * Invoked on each preference click in this hierarchy, overrides
@@ -92,14 +92,14 @@ public class WirelessSettings extends PreferenceActivity {
         addPreferencesFromResource(R.xml.wireless_settings);
 
         CheckBoxPreference airplane = (CheckBoxPreference) findPreference(KEY_TOGGLE_AIRPLANE);
-        CheckBoxPreference wifi = (CheckBoxPreference) findPreference(KEY_TOGGLE_WIFI);
-        CheckBoxPreference bt = (CheckBoxPreference) findPreference(KEY_TOGGLE_BLUETOOTH);
+    //    CheckBoxPreference wifi = (CheckBoxPreference) findPreference(KEY_TOGGLE_WIFI);
+      //  CheckBoxPreference bt = (CheckBoxPreference) findPreference(KEY_TOGGLE_BLUETOOTH);
         CheckBoxPreference nfc = (CheckBoxPreference) findPreference(KEY_TOGGLE_NFC);
 
         mAirplaneModeEnabler = new AirplaneModeEnabler(this, airplane);
         mAirplaneModePreference = (CheckBoxPreference) findPreference(KEY_TOGGLE_AIRPLANE);
-        mWifiEnabler = new WifiEnabler(this, wifi);
-        mBtEnabler = new BluetoothEnabler(this, bt);
+        //mWifiEnabler = new WifiEnabler(this, wifi);
+        //mBtEnabler = new BluetoothEnabler(this, bt);
         mNfcEnabler = new NfcEnabler(this, nfc);
 
         String toggleable = Settings.System.getString(getContentResolver(),
@@ -120,7 +120,7 @@ public class WirelessSettings extends PreferenceActivity {
                 ps.setDependency(KEY_TOGGLE_AIRPLANE);
             }
         }
-
+/*
         // Manually set dependencies for Wifi when not toggleable.
         if (toggleable == null || !toggleable.contains(Settings.System.RADIO_WIFI)) {
             wifi.setDependency(KEY_TOGGLE_AIRPLANE);
@@ -138,7 +138,7 @@ public class WirelessSettings extends PreferenceActivity {
         if (ServiceManager.getService(BluetoothAdapter.BLUETOOTH_SERVICE) == null) {
             getPreferenceScreen().removePreference(bt);
         }
-
+*/
         // Remove NFC if its not available
         if (NfcAdapter.getDefaultAdapter(this) == null) {
             getPreferenceScreen().removePreference(nfc);
@@ -173,8 +173,8 @@ public class WirelessSettings extends PreferenceActivity {
         super.onResume();
 
         mAirplaneModeEnabler.resume();
-        mWifiEnabler.resume();
-        mBtEnabler.resume();
+  //      mWifiEnabler.resume();
+    //    mBtEnabler.resume();
         mNfcEnabler.resume();
     }
 
@@ -183,8 +183,8 @@ public class WirelessSettings extends PreferenceActivity {
         super.onPause();
 
         mAirplaneModeEnabler.pause();
-        mWifiEnabler.pause();
-        mBtEnabler.pause();
+ //       mWifiEnabler.pause();
+   //     mBtEnabler.pause();
         mNfcEnabler.pause();
     }
 

@@ -1173,4 +1173,18 @@
     <string name="wimax_settings_summary" msgid="3207355006084135453">"إعداد شبكة 4G والمودم وإدراتهما"</string>
     <string name="status_wimax_mac_address" msgid="8390791848661413416">"عنوان 4G MAC"</string>
     <string name="additional_system_update_settings_list_item_title" msgid="214987609894661992">"تحديثات إضافية للنظام"</string>
+
+<!--XPERIENCE-->
+<string name="settings_ics_device"> جهاز</string>
+<string name="settings_ics_radio"> راديو</string>
+<string name="settings_ics_system"> نظام</string>
+<string name="settings_ics_personal"> الشخصية</string>
+<string name="settings_ics_interface"> السطح البيني</string>
+<string name="settings_radio_more"> أكثر ...</string>
+<string name="performance_settings_title_head"> أداء</string>
+<string name="power_usage_summary_text"> استهلاك الطاقة</string>
+<string name="settings_hololauncher"> راجمة</string>
+<string name="themes_settings"> المواضيع</string>
+    <string name="builder_info_title"> المطور XPE </string>
+<string name="settings_ics_development" > تنمية </string>
 </resources>

@@ -16,11 +16,15 @@
 
 package com.android.settings;
 
+import com.android.settings.wifi.WifiEnabler;
+import com.android.settings.bluetooth.BluetoothEnabler; 
+
 import android.net.sip.SipManager;
 import android.os.Bundle;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.ActivityInfo;
+import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceGroup;
@@ -38,6 +42,12 @@ public class Settings extends PreferenceActivity {
     private static final String KEY_LAUNCHER = "launcher_settings";
 
     private Preference mLauncherSettings;
+    
+    private WifiEnabler mWifiEnabler;
+    private BluetoothEnabler mBtEnabler;
+    
+    private static final String KEY_TOGGLE_WIFI = "toggle_wifi";
+    private static final String KEY_TOGGLE_BLUETOOTH = "toggle_bluetooth";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +55,14 @@ public class Settings extends PreferenceActivity {
 
         addPreferencesFromResource(R.xml.settings);
 
+         //for Wifi Checkbox
+        CheckBoxPreference wifi = (CheckBoxPreference) findPreference(KEY_TOGGLE_WIFI);
+    mWifiEnabler = new WifiEnabler(this, wifi);
+    
+    //for Bluetooth Checkbox
+    CheckBoxPreference bt = (CheckBoxPreference) findPreference(KEY_TOGGLE_BLUETOOTH);
+    mBtEnabler = new BluetoothEnabler(this, bt);
+     
         int activePhoneType = TelephonyManager.getDefault().getPhoneType();
 
         PreferenceGroup parent = (PreferenceGroup) findPreference(KEY_PARENT);
@@ -65,7 +83,10 @@ public class Settings extends PreferenceActivity {
         findPreference(KEY_CALL_SETTINGS).setEnabled(
                 !AirplaneModeEnabler.isAirplaneModeOn(this)
                 || SipManager.isVoipSupported(this));
-
+    
+    mWifiEnabler.resume();
+        mBtEnabler.resume();
+     
         Intent intent = new Intent();
         intent.setAction("android.intent.action.MAIN");
         intent.addCategory("android.intent.category.HOME");
@@ -84,4 +105,13 @@ public class Settings extends PreferenceActivity {
         }
     }
 
+    
+    @Override
+    protected void onPause() {
+    super.onPause();
+   mWifiEnabler.pause();
+    mBtEnabler.pause();
+  } 
 }
+
+

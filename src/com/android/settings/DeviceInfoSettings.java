@@ -53,6 +53,7 @@ public class DeviceInfoSettings extends PreferenceActivity {
     private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
     private static final String PROPERTY_URL_SAFETYLEGAL = "ro.url.safetylegal";
     private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
+    private static final String KEY_XPERIENCE = "xpe_dev";
 
     long[] mHits = new long[3];
 
@@ -84,6 +85,8 @@ public class DeviceInfoSettings extends PreferenceActivity {
         setValueSummary("mod_version", "ro.modversion");
         findPreference("mod_version").setEnabled(true);
         setValueSummary("build_date", "ro.build.date");
+        setValueSummary("xpe_dev", "ro.xpe.dev");
+         findPreference("xpe_dev").setEnabled(true);
         setValueSummary("recovery_version", "ro.recversion");
         findPreference("recovery_version").setEnabled(true);
         

@@ -3161,4 +3161,18 @@ found in the list of installed applications.</string>
     <string name="increasing_ring_interval_3seconds">3 seconds</string>
     <string name="increasing_ring_interval_5seconds">5 seconds</string>
     <string name="increasing_ring_interval_10seconds">10 seconds</string>
+
+<!--XPERIENCE-->
+<string name="settings_ics_device"> Device</string>
+<string name="settings_ics_radio"> Radio</string>
+<string name="settings_ics_system"> System</string>
+<string name="settings_ics_personal"> Personal</string>
+<string name="settings_ics_interface"> Interface</string>
+<string name="settings_radio_more"> More...</string>
+<string name="performance_settings_title_head"> Performance</string>
+<string name="power_usage_summary_text"> Power usage</string>
+<string name="settings_hololauncher"> Launcher</string>
+<string name="themes_settings"> Themes</string>
+    <string name="builder_info_title"> Developer XPE </string>
+<string name="settings_ics_development" > Development </string>
 </resources>
