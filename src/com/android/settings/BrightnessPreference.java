@@ -34,6 +34,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.SeekBar;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import android.util.Log;
@@ -151,10 +152,16 @@ public class BrightnessPreference extends SeekBarDialogPreference implements
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if (buttonView == mCheckBoxUltra) {
             Log.d(TAG,"ultrabrightess set to "+isChecked);
-            if (isChecked)
-                writeOneLine("/sys/devices/platform/i2c-adapter/i2c-0/0-0036/mode", "i2c_pwm");
+           File f = new File("/sys/devices/platform/i2c-adapter/i2c-0/0-0036/mode");
+            String modeFile = "";
+            if (f.isFile() && f.canRead())
+                modeFile = "/sys/devices/platform/i2c-adapter/i2c-0/0-0036/mode";
             else
-                writeOneLine("/sys/devices/platform/i2c-adapter/i2c-0/0-0036/mode", "i2c_pwm_als");
+                modeFile = "/sys/devices/i2c-0/0-0036/mode"; 
+            if (isChecked)
+                writeOneLine(modeFile, "i2c_pwm");
+            else
+                writeOneLine(modeFile, "i2c_pwm_als");
             setUltraMode(isChecked ? Settings.System.SCREEN_BRIGHTNESS_MODE_ULTRA_ENABLED
                 : Settings.System.SCREEN_BRIGHTNESS_MODE_ULTRA_DISABLED);
             return;
