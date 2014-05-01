@@ -1699,7 +1699,7 @@
     <string name="help_label" msgid="1107174367904110532">"Pomoć"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"Poruke mobilne mreže"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Odaberite vrste hitnih obavijesti za prikaz."</string>
-<!-- CYANOGENMOD EDITS START -->
+<!-- XPerience EDITS START -->
 
     <!-- Wifi sleep timeout -->
     <string name="wifi_idle_mn_title">Zadrži Wi-Fi aktivnim</string>
@@ -2253,17 +2253,17 @@
     <string name="system_update_settings_list_item_summary">""</string>
 
     <!-- Donate  -->
-    <!-- About device screen, list item title. Takes the user to the screen about how to donate to the CyanogenMod Project. -->
+    <!-- About device screen, list item title. Takes the user to the screen about how to donate to the XPerience Project. -->
     <string name="donate_settings_title">Doniraj</string>
-    <!-- About device screen, list item summary. Takes the user to the screen about how to donate to the CyanogenMod Project. -->
+    <!-- About device screen, list item summary. Takes the user to the screen about how to donate to the XPerience Project. -->
     <string name="donate_settings_summary">""</string>
 
     <!-- Anonymous Statistics  -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">CyanogenMod Statistike</string>
-    <string name="anonymous_statistics_summary">Unaprijedite CyanogenMod sudjelovanjem u anonimnim prijavama vaših informacija</string>
+    <string name="anonymous_statistics_title">XPerience Statistike</string>
+    <string name="anonymous_statistics_summary">Unaprijedite XPerience sudjelovanjem u anonimnim prijavama vaših informacija</string>
     <string name="anonymous_statistics_warning_title">O</string>
-    <string name="anonymous_statistics_warning">Sudjelovanjem u CyanogenMod Statistikama omogućiti ćete da vaši ne-osobni podatci budu poslani CyanogenMod developerima kako bi pratili jedinstvene instalacije na raznim uređajima. Poslane informacije sadržavaju jedinstveni identifikator koji ne kompromitira vašu privatnost ni osobne podatke. Podatci se šalju pri svakom pokretanju uređaja.\n\nKao primjer podataka koji se šalju pritisnite na Pregledaj Podatke.</string>
+    <string name="anonymous_statistics_warning">Sudjelovanjem u XPerience Statistikama omogućiti ćete da vaši ne-osobni podatci budu poslani XPerience developerima kako bi pratili jedinstvene instalacije na raznim uređajima. Poslane informacije sadržavaju jedinstveni identifikator koji ne kompromitira vašu privatnost ni osobne podatke. Podatci se šalju pri svakom pokretanju uređaja.\n\nKao primjer podataka koji se šalju pritisnite na Pregledaj Podatke.</string>
     <string name="enable_reporting_title">Uključi slanje</string>
     <string name="preview_data_title">Pregledaj Podatke</string>
     <string name="preview_data_summary">%s</string>
@@ -2271,7 +2271,7 @@
     <string name="anonymous_learn_more">Više</string>
 
     <!-- Anonymous Statistics - Notification -->
-    <string name="anonymous_notification_desc">Uključi ili Isključi CyanogenMod Statistike</string>
+    <string name="anonymous_notification_desc">Uključi ili Isključi XPerience Statistike</string>
 
     <!-- Anonymous Statistics - Preview -->
     <string name="preview_id_title">Jedinstveni ID</string>
@@ -2412,7 +2412,7 @@
     <string name="device_hostname">Hostname uređaja</string>
 
     <!-- About phone screen,  setting option name-->
-    <string name="mod_version">CyanogenMod verzija</string>
+    <string name="mod_version">XPerience verzija</string>
     <string name="mod_version_default">Nepoznati</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Build datum</string>
@@ -2462,5 +2462,5 @@
     <string name="cmupdate_settings_title">MiniCM ažuriranja</string>
     <string name="cmupdate_settings_summary">Potraži, pogledaj ili instaliraj dostupna ažuriranja</string>
 
-    <!-- **** CYANOGENMOD ADDITIONS END **** -->
+    <!-- **** XPerience ADDITIONS END **** -->
 </resources>

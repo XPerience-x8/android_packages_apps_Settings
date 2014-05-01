@@ -1739,7 +1739,7 @@
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"Cellán belüli adások"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Válassza ki a megjelenítendő vészriasztások típusait."</string>
 
-    <!-- CYANOGENMOD EDITS START -->
+    <!-- XPerience EDITS START -->
 
     <!-- Wifi sleep timeout -->
     <string name="wifi_idle_mn_title">Wi-Fi tétlenségi idő</string>
@@ -2316,17 +2316,17 @@
     <string name="system_update_settings_list_item_summary">""</string>
 -->
     <!-- Donate  -->
-    <!-- About device screen, list item title. Takes the user to the screen about how to donate to the CyanogenMod Project. -->
+    <!-- About device screen, list item title. Takes the user to the screen about how to donate to the XPerience Project. -->
     <string name="donate_settings_title">Támogatás</string>
-    <!-- About device screen, list item summary. Takes the user to the screen about how to donate to the CyanogenMod Project. -->
+    <!-- About device screen, list item summary. Takes the user to the screen about how to donate to the XPerience Project. -->
     <string name="donate_settings_summary">""</string>
 
     <!-- Anonymous Statistics  -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">CyanogenMod Statisztika</string>
-    <string name="anonymous_statistics_summary">Segítsen a CyanogenMod jobbá tételében, kapcsolja be az anonim statisztikai adatok gyűjtését</string>
+    <string name="anonymous_statistics_title">XPerience Statisztika</string>
+    <string name="anonymous_statistics_summary">Segítsen a XPerience jobbá tételében, kapcsolja be az anonim statisztikai adatok gyűjtését</string>
     <string name="anonymous_statistics_warning_title">Tudnivalók</string>
-    <string name="anonymous_statistics_warning">A CyanogenMod statisztika engedélyezése nem terjed ki személyes adatokra, ezért csak egy egyedi azonosítóval azonosítjuk az eszközöket. A statisztika minden rendszerindításkor elküldésre kerül, hogy követni tudjuk az új telepítéseket.\n\nAz elküldött adatok menüpont alatt láthatja a statisztikai adatokat.</string>
+    <string name="anonymous_statistics_warning">A XPerience statisztika engedélyezése nem terjed ki személyes adatokra, ezért csak egy egyedi azonosítóval azonosítjuk az eszközöket. A statisztika minden rendszerindításkor elküldésre kerül, hogy követni tudjuk az új telepítéseket.\n\nAz elküldött adatok menüpont alatt láthatja a statisztikai adatokat.</string>
     <string name="enable_reporting_title">Statisztika engedélyezése</string>
     <string name="preview_data_title">Elküldött adatok</string>
     <string name="preview_data_summary">%s</string>
@@ -2334,7 +2334,7 @@
     <string name="anonymous_learn_more">Tudjon meg többet</string>
 
     <!-- Anonymous Statistics - Notification -->
-    <string name="anonymous_notification_desc">CyanogenMod Statisztika engedélyezése/tiltása</string>
+    <string name="anonymous_notification_desc">XPerience Statisztika engedélyezése/tiltása</string>
 
     <!-- Anonymous Statistics - Preview -->
     <string name="preview_id_title">Egyedi azonosító</string>
@@ -2474,7 +2474,7 @@
     <string name="device_hostname">Eszköz elérési neve</string>
 
     <!-- About phone screen,  setting option name-->
-    <string name="mod_version">CyanogenMod verzió</string>
+    <string name="mod_version">XPerience verzió</string>
     <string name="mod_version_default">Ismeretlen</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Build dátuma</string>
@@ -2561,5 +2561,5 @@
     <string name="gestures_action_search">Keresés</string>
     <string name="gestures_action_recent">Alkalmazás előzmények</string>
 
-    <!-- **** CYANOGENMOD ADDITIONS END **** -->
+    <!-- **** XPerience ADDITIONS END **** -->
 </resources>

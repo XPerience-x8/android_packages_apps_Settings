@@ -47,7 +47,7 @@ public class SWAPInfo extends AlertActivity {
 
 	private static final String SWAPINFO_PATH = "/tmp/swapinfo.log";
 
-	private static final String SWAP_FILE = "mnt/sdcard/.MiniCM9.swp";
+	private static final String SWAP_FILE = "mnt/sdcard/.XPerience.swp";
 
 	private static final String SWAP_ENABLED_PROP = "persist.sys.swap.enabled";
 

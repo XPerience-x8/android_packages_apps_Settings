@@ -576,11 +576,11 @@
 
     <!-- Anonymous Statistics  -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">Statistiques CyanogenMod</string>
-    <string name="anonymous_statistics_summary">Aidez CyanogenMod en participant à l\'envoi de données anonymes pour comptabiliser les installations par type d\'appareil</string>
+    <string name="anonymous_statistics_title">Statistiques XPerience</string>
+    <string name="anonymous_statistics_summary">Aidez XPerience en participant à l\'envoi de données anonymes pour comptabiliser les installations par type d\'appareil</string>
     <string name="anonymous_statistics_warning_title">À propos</string>
-    <string name="anonymous_statistics_warning">Autoriser les statistiques CyanogenMod permet l\'envoi de données anonymes aux développeurs
-    du système CyanogenMod pour comptabiliser le nombre d\'installations par type d\'appareil. Les informations envoyées contiennent un identifiant unique de appareil
+    <string name="anonymous_statistics_warning">Autoriser les statistiques XPerience permet l\'envoi de données anonymes aux développeurs
+    du système XPerience pour comptabiliser le nombre d\'installations par type d\'appareil. Les informations envoyées contiennent un identifiant unique de appareil
     afin de limiter les doublons et en aucune manière ne compromet la sécurité de vos données. Ce jeu d\'informations est envoyé à chaque redémarrage pour ne conserver que les installations actives.
     \n\nVous pouvez visualiser ces données en sélectionnant \"Prévisualiser les données\".</string>
     <string name="enable_reporting_title">Activer le reporting</string>
@@ -589,7 +589,7 @@
     <string name="anonymous_learn_more">En savoir plus...</string>
 
     <!-- Anonymous Statistics - Notification -->
-    <string name="anonymous_notification_desc">Activer ou non les statistiques CyanogenMod</string>
+    <string name="anonymous_notification_desc">Activer ou non les statistiques XPerience</string>
 
     <!-- Anonymous Statistics - Preview -->
     <string name="preview_id_title">Identifiant unique</string>
@@ -728,7 +728,7 @@
     <string name="device_hostname">Nom d\'hôte de l\'appareil</string>
 
     <!-- About phone screen,  setting option name-->
-    <string name="mod_version">Version CyanogenMod</string>
+    <string name="mod_version">Version XPerience</string>
     <string name="mod_version_default">Inconnue</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Date de compilation</string>

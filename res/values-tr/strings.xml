@@ -1723,7 +1723,7 @@
     <string name="help_label" msgid="1107174367904110532">"Yardım"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"Hücre yayınları"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Görüntülenecek acil durum uyarı türünü seçin."</string>
-    <!-- ***************** CYANOGENMOD EDITS START *************************-->
+    <!-- ***************** XPerience EDITS START *************************-->
     <!-- GPS Source selection : #CM  -->
     <string name="location_gps_source_title">GPS Kaynağı</string>
     <string name="location_gps_source_summary">Yer sağlayıcı olarak harici bluetooth GPS antenini veya dahili GPS antenini kullan</string>
@@ -2234,12 +2234,12 @@
     <string name="donate_settings_title">Bağış Yap</string>
     <string name="donate_settings_summary">""</string>
     <!-- Anonymous Statistics #CM -->
-    <string name="anonymous_statistics_title">CyanogenMod istatistikleri</string>
-    <string name="anonymous_statistics_summary">CyanogenMod\'un kullanım istatistiklerini toplamasına izin ver</string>
+    <string name="anonymous_statistics_title">XPerience istatistikleri</string>
+    <string name="anonymous_statistics_summary">XPerience\'un kullanım istatistiklerini toplamasına izin ver</string>
     <string name="anonymous_statistics_warning_title">Hakkında</string>
     <string name="anonymous_statistics_warning">İsteğe bağlı anonim verilerin etkinleştirilmesi,
     hangi cihazın hangi sürümü kullandığı gibi bilgileri
-    CyanogenMod geliştiricilerinin izlemesine izin vererek gönderir.
+    XPerience geliştiricilerinin izlemesine izin vererek gönderir.
     Gönderilen bilgi sadece benzersiz kimliktir, gizliliğinizi
     ortaya çıkaran bilgiler iletilmez.
     Veri, cihaz her açıldığında gönderilir. Gönderilen verilerin
@@ -2249,7 +2249,7 @@
     <string name="preview_data_summary">%s</string>
     <string name="view_stats_title">İstatistiklere bak</string>
     <string name="anonymous_learn_more">Daha fazlası</string>
-    <string name="anonymous_notification_desc">CyanogenMod istatistiklerini aç veya kapat</string>
+    <string name="anonymous_notification_desc">XPerience istatistiklerini aç veya kapat</string>
     <string name="preview_id_title">Benzersiz kimlik</string>
     <string name="preview_device_title">Cihaz</string>
     <string name="preview_version_title">Sürüm</string>
@@ -2367,7 +2367,7 @@
     <!-- Hostname setting -->
     <string name="device_hostname">Cihaz adı</string>
     <!-- About phone screen -->
-    <string name="mod_version">CyanogenMod sürümü</string>
+    <string name="mod_version">XPerience sürümü</string>
     <string name="mod_version_default">Bilinmiyor</string>
     <string name="build_date">Derleme tarihi</string>
     <string name="cpu_info">İşlemci</string>
@@ -2437,5 +2437,5 @@
     <string name="gestures_action_menu">Menü tuşunu taklit et</string>
     <string name="gestures_action_search">Aramayı başlat</string>
     <string name="gestures_action_recent">Son uygulamalar</string>
-    <!-- ***************** CYANOGENMOD EDITS END *************************-->
+    <!-- ***************** XPerience EDITS END *************************-->
 </resources>

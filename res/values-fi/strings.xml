@@ -1699,7 +1699,7 @@
     <string name="dock_force_undock_summary" product="default">Irroita puhelin</string>
     <string name="allow_mock_sms">Salli SMS-viestien imitointi</string>
     <string name="accessibility_home_button_answers_call_title">Koti-näppäin vastaa puheluun</string>
-    <!-- CYANOGENMOD EDITS START -->
+    <!-- XPerience EDITS START -->
     <string name="wifi_idle_mn_title">Wi-Fin aikakatkaisu valmiustilassa</string>
     <string name="wifi_idle_5mn">5 minuuttia</string>
     <string name="wifi_idle_15mn">15 minuuttia (oletus)</string>
@@ -2100,16 +2100,16 @@
     <string name="system_update_settings_list_item_summary">""</string>
     <string name="donate_settings_title">Lahjoita</string>
     <string name="donate_settings_summary">""</string>
-    <string name="anonymous_statistics_title">CyanogenMod-tilastointi</string>
-    <string name="anonymous_statistics_summary">Auta tekemään CyanogenModista parempi tarjoamalla anonyymejä tilastoraportteja</string>
+    <string name="anonymous_statistics_title">XPerience-tilastointi</string>
+    <string name="anonymous_statistics_summary">Auta tekemään XPerienceista parempi tarjoamalla anonyymejä tilastoraportteja</string>
     <string name="anonymous_statistics_warning_title">Tietoja</string>
-    <string name="anonymous_statistics_warning">CyanogenMod-tilastojen käyttöönotto sallii anonyymien tietojen lähettämisen CyanogenModin kehittäjille, jotta laitteiden järjestelmäasennuksia voidaan seurata. Informaatio sisältää uniikin tunnisteen, joka ei sisällä henkilökohtaisia tietojasi. Tietoa lähetetään jokaisella uudelleenkäynnistyskerralla.\n\nValitse Esikatsele tietoja nähdäksesi, minkälaisia tietoja laitteestasi lähetetään.</string>
+    <string name="anonymous_statistics_warning">XPerience-tilastojen käyttöönotto sallii anonyymien tietojen lähettämisen XPeriencein kehittäjille, jotta laitteiden järjestelmäasennuksia voidaan seurata. Informaatio sisältää uniikin tunnisteen, joka ei sisällä henkilökohtaisia tietojasi. Tietoa lähetetään jokaisella uudelleenkäynnistyskerralla.\n\nValitse Esikatsele tietoja nähdäksesi, minkälaisia tietoja laitteestasi lähetetään.</string>
     <string name="enable_reporting_title">Ota lähettäminen käyttöön</string>
     <string name="preview_data_title">Esikatsele tietoja</string>
     <string name="preview_data_summary">%s</string>
     <string name="view_stats_title">Näytä tilastot</string>
     <string name="anonymous_learn_more">Lue lisää</string>
-    <string name="anonymous_notification_desc">Salli tai estä CyanogenMod-tilastointi</string>
+    <string name="anonymous_notification_desc">Salli tai estä XPerience-tilastointi</string>
     <string name="preview_id_title">Uniikki tunniste</string>
     <string name="preview_device_title">Laite</string>
     <string name="preview_version_title">Versio</string>
@@ -2207,7 +2207,7 @@
     <string name="kill_app_longpress_back">Tapa sovellus</string>
     <string name="kill_app_longpress_back_summary">Tappaa etualalla olevan sovelluksen takaisin-painikkeella</string>
     <string name="device_hostname">Laitteen verkkonimi</string>
-    <string name="mod_version">CyanogenMod-versio</string>
+    <string name="mod_version">XPerience-versio</string>
     <string name="mod_version_default">Tuntematon</string>
     <string name="build_date">Luontipäivä</string>
     <string name="build_date_default">2012-01-01-0000</string>
@@ -2265,7 +2265,7 @@
     <string name="lockscreen_buttons_previous">Edellinen kappale</string>
     <string name="lockscreen_buttons_playpause">Play/Pause</string>
     <string name="lockscreen_buttons_toggle_sound">Äänet</string>
-    <string name="cmupdate_settings_title">CyanogenMod-päivitykset</string>
+    <string name="cmupdate_settings_title">XPerience-päivitykset</string>
     <string name="cmupdate_settings_summary">Tarkista, katso tai asenna saatavilla olevat päivitykset</string>
     <string name="app_security_title">Sovellusten turvallisuus</string>
     <string name="sms_security_check_limit_title">Tekstiviestirajoitus</string>
@@ -2295,5 +2295,5 @@
     <string name="gestures_action_menu">Matki Menu-näppäintä</string>
     <string name="gestures_action_search">Aloita haku</string>
     <string name="gestures_action_recent">Viimeisimmät sovellukset</string>
-    <!-- **** CYANOGENMOD ADDITIONS END **** -->
+    <!-- **** XPerience ADDITIONS END **** -->
 </resources>

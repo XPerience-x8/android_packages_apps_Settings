@@ -1755,7 +1755,7 @@
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"小区广播"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"请选择要显示的紧急消息类型。"</string>
 
-   <!-- CYANOGENMOD EDITS START -->
+   <!-- XPerience EDITS START -->
 
     <!-- Wifi sleep timeout -->
     <string name="wifi_idle_mn_title">Wi-Fi 待机超时</string>
@@ -2324,24 +2324,24 @@
     <!-- About device screen, list item summary. Takes the user to the screen for seeing and installing system updates. -->
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
     <!-- Donate  -->
-    <!-- About device screen, list item title. Takes the user to the screen about how to donate to the CyanogenMod Project. -->
+    <!-- About device screen, list item title. Takes the user to the screen about how to donate to the XPerience Project. -->
     <string name="donate_settings_title">捐赠</string>
-    <!-- About device screen, list item summary. Takes the user to the screen about how to donate to the CyanogenMod Project. -->
+    <!-- About device screen, list item summary. Takes the user to the screen about how to donate to the XPerience Project. -->
     <string name="donate_settings_summary">""</string>
 
     <!-- Anonymous Statistics  -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">CyanogenMod 统计</string>
-    <string name="anonymous_statistics_summary">开启匿名统计报告以便帮助 CyanogenMod 未来向更好的方向发展</string>
+    <string name="anonymous_statistics_title">XPerience 统计</string>
+    <string name="anonymous_statistics_summary">开启匿名统计报告以便帮助 XPerience 未来向更好的方向发展</string>
     <string name="anonymous_statistics_warning_title">关于统计</string>
-    <string name="anonymous_statistics_warning">开启 CyanogenMod 统计将允许非个人数据被提交到 CyanogenMod 的开发者以便记录各种设备上的独特安装。提交的信息包含一个独特的标识符, 而不会涉及您的隐私与个人数据。该数据将在每次启动时被提交。\n\n作为被提交数据的一个实例, 请点击预览数据。</string>
+    <string name="anonymous_statistics_warning">开启 XPerience 统计将允许非个人数据被提交到 XPerience 的开发者以便记录各种设备上的独特安装。提交的信息包含一个独特的标识符, 而不会涉及您的隐私与个人数据。该数据将在每次启动时被提交。\n\n作为被提交数据的一个实例, 请点击预览数据。</string>
     <string name="enable_reporting_title">开启报告</string>
     <string name="preview_data_title">预览数据</string>
     <string name="view_stats_title">查看统计</string>
     <string name="anonymous_learn_more">查看更多</string>
 
     <!-- Anonymous Statistics - Notification -->
-    <string name="anonymous_notification_desc">启用或禁用 CyanogenMod 统计</string>
+    <string name="anonymous_notification_desc">启用或禁用 XPerience 统计</string>
 
     <!-- Anonymous Statistics - Preview -->
     <string name="preview_id_title">独特 ID</string>
@@ -2482,7 +2482,7 @@
     <string name="device_hostname">设备网络名</string>
 
     <!-- About phone screen,  setting option name-->
-    <string name="mod_version">CyanogenMod 版本</string>
+    <string name="mod_version">XPerience 版本</string>
     <string name="mod_version_default">未知</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">编译日期</string>
@@ -2569,5 +2569,5 @@
     <string name="gestures_action_search">启动搜索</string>
     <string name="gestures_action_recent">最近使用程序</string>
 
-    <!-- **** CYANOGENMOD ADDITIONS END **** -->
+    <!-- **** XPerience ADDITIONS END **** -->
 </resources>

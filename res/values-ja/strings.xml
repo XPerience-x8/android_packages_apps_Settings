@@ -2317,18 +2317,18 @@
 要再起動)</string>
 
     <!-- Donate #CM -->
-    <!-- About device screen, list item title. Takes the user to the screen about how to donate to the CyanogenMod Project. -->
+    <!-- About device screen, list item title. Takes the user to the screen about how to donate to the XPerience Project. -->
     <string name="donate_settings_title">寄付</string>
-    <!-- About device screen, list item summary. Takes the user to the screen about how to donate to the CyanogenMod Project. -->
+    <!-- About device screen, list item summary. Takes the user to the screen about how to donate to the XPerience Project. -->
     <string name="donate_settings_summary">""</string>
 
     <!-- Anonymous Statistics #CM -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">CyanogenMod 利用統計</string>
-    <string name="anonymous_statistics_summary">CyanogenMod をより良くするための匿名利用統計報告をオプトインする</string>
+    <string name="anonymous_statistics_title">XPerience 利用統計</string>
+    <string name="anonymous_statistics_summary">XPerience をより良くするための匿名利用統計報告をオプトインする</string>
     <string name="anonymous_statistics_warning_title">利用統計について</string>
     <string name="anonymous_statistics_warning">匿名利用状況の送信を許諾することによって、
-                CyanogenModの開発者がデバイス単位のユニークインストール数を
+                XPerienceの開発者がデバイス単位のユニークインストール数を
                 追跡することができます。
                 送信される情報にはユニークIDが含まれますが、これはあなたの
                 個人情報、端末のタイプ及びバージョン情報とは結びつきません。
@@ -2341,7 +2341,7 @@
     <string name="anonymous_learn_more">詳細</string>
 
     <!-- Anonymous Statistics - Notification -->
-    <string name="anonymous_notification_desc">CyanogenMod 利用統計を有効/無効にする</string>
+    <string name="anonymous_notification_desc">XPerience 利用統計を有効/無効にする</string>
 
     <!-- Anonymous Statistics - Preview -->
     <string name="preview_id_title">ユニークID</string>
@@ -2351,7 +2351,7 @@
     <string name="preview_carrier_title">キャリア</string>
 
     <!-- About device screen, version of modification of Android. -->
-    <string name="mod_version">CyanogenMod バージョン</string>
+    <string name="mod_version">XPerience バージョン</string>
     <string name="mod_version_default">不明</string>
 
     <!-- About device screen, build date of ROM. -->
@@ -2554,5 +2554,5 @@
     <string name="gestures_action_search">検索を起動</string>
     <string name="gestures_action_recent">最近使ったアプリ</string>
 
-    <!-- **** CYANOGENMOD ADDITIONS END **** -->
+    <!-- **** XPerience ADDITIONS END **** -->
 </resources>

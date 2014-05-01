@@ -51,7 +51,7 @@ public class SWAPActivity extends PreferenceActivity implements
 
     private static final String TAG = "SWAPSettings";
 
-    private static final String SWAP_FILE = "/mnt/sdcard/.MiniCM9.swp";
+    private static final String SWAP_FILE = "/mnt/sdcard/.XPerience.swp";
 
     private static final String SWAP_ENABLED_PROP = "persist.sys.swap.enabled";
 

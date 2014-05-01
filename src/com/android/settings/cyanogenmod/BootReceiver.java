@@ -49,8 +49,8 @@ public class BootReceiver extends BroadcastReceiver {
     private static final String IOSCHED_SETTINGS_PROP = "sys.iosched.restored";
     private static final String KSM_SETTINGS_PROP = "sys.ksm.restored";
     private static final String UNDERVOLTING_PROP = "persist.sys.undervolt";
-    private static final String SWAP_FILE = "/mnt/sdcard/.MiniCM9.swp";
-    private static final String SWAP_FILE_STAGING = "/mnt/secure/staging/.MiniCM9.swp";
+    private static final String SWAP_FILE = "/mnt/sdcard/.XPerience.swp";
+    private static final String SWAP_FILE_STAGING = "/mnt/secure/staging/.XPerience.swp";
     private static final String SWAP_ENABLED_PROP = "persist.sys.swap.enabled";
     private static final String SWAP_SIZE_PROP = "persist.sys.swap.size";
     private static String UV_MODULE;
